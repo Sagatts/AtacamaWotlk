@@ -1,3 +1,7 @@
+*{
+    color: white;
+}
+
 .fondo{
     background-image: url(img/patron.jpg);
     align-items: center;
@@ -25,4 +29,23 @@ a{
 .img_logo{
     width: 30px;
     height: 30px;
+}
+.texto{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+.distribucion_1 {
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 20px;
+}
+li{
+    list-style: none;
+}
+.contenedor_2{
+    width: 90%; 
+    margin: auto;
 }
