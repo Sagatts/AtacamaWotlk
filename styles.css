@@ -49,3 +49,10 @@ li{
     width: 90%; 
     margin: auto;
 }
+.el_footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    text-align: left;
+    padding-right: 40px;
+}
