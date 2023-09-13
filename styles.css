@@ -1,0 +1,28 @@
+.fondo{
+    background-image: url(img/patron.jpg);
+    align-items: center;
+    text-align: center;
+}
+.container{
+    background-image: url(img/fondo_container.avif);
+    background-size: cover;
+    text-align: center;
+    font-size: 25px;
+    width: 90%;
+    margin: auto;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.barra_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    color: white;
+}
+.img_logo{
+    width: 30px;
+    height: 30px;
+}
