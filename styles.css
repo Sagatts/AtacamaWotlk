@@ -9,7 +9,6 @@ nav{
     background-image: url(img/Background_nav.jpg);
     border-bottom: 3px solid gray;
 }
-
 .logo{
     display: block;
     width: 416px;
@@ -17,6 +16,8 @@ nav{
     margin: 0;
     background-repeat: no-repeat;
     background-position: 0px 0px;
+    position: absolute;
+    z-index: 1;
 }
 .navegacion{
     width: 810px;
@@ -45,4 +46,14 @@ ul.horizontal-list li {
 }
 .separacion_lista{
     padding-top: 40px;
+}
+.img_header{
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+}
+.borde{
+    background-color: #ffffff; /* Color de fondo del elemento */
+    border: 1px solid #dddddd; /* Borde sólido opcional */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
