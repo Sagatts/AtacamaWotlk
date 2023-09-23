@@ -83,9 +83,53 @@ ul.horizontal-list li {
     padding-top: 20px;
 }
 .div_section{
-    width: 70%;
-    height: 1000px;
+    width: 80%;
+    height: 980px;
     margin: 0 auto;
     display: flex;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.contenedor_2{
+    margin-right: 40px;
+    width: 75%;
+}
+.contenedor_derecho{
+    margin: 0%;
+    width: 25%;
+    height: 300px;
+}
+.color_fondo_derecho{
+    background-color: rgb(27, 27, 27);
+    margin-bottom: 30px;
+}
+.img_derecha{
+    width: 100%;
+    height: 300px;
+}
+h1{
+    text-align: center;
+}
+.color_fondo_izquierdo{
+    background-color: rgb(27, 27, 27);
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.facciones{
+    display: flex;
+}
+.facciones_img{
+    height: 400px;
+    margin-right: 20px;
+    border-radius: 5%;
+    width: 900px;
+}
+.wow-text {
+    font-family: 'Cinzel', sans-serif;
+    font-size: 48px;
+    color: #ffd100;
+    text-shadow: 2px 2px 4px #000;
 }
