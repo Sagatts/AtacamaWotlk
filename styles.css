@@ -21,6 +21,7 @@ section{
     border-top: 3px solid gray;
     background-color: rgb(8, 7, 8);
     margin: 0;
+    border-bottom: 3px solid gray;
 }
 
 .logo{
@@ -81,6 +82,7 @@ ul.horizontal-list li {
     margin: 0 auto;
     display: flex;
     padding-top: 20px;
+    justify-content: space-around;
 }
 .div_section{
     width: 80%;
@@ -103,6 +105,9 @@ ul.horizontal-list li {
 .color_fondo_derecho{
     background-color: rgb(27, 27, 27);
     margin-bottom: 30px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
 }
 .img_derecha{
     width: 100%;
@@ -120,6 +125,10 @@ h1{
 }
 .facciones{
     display: flex;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    justify-content: space-around;
 }
 .facciones_img{
     height: 400px;
@@ -132,4 +141,49 @@ h1{
     font-size: 48px;
     color: #ffd100;
     text-shadow: 2px 2px 4px #000;
+}
+.boton{
+    text-decoration: none;
+    background-color: #e1ad12;
+    color: rgb(49, 49, 49);
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all .3s ease;
+    float: left;
+}
+.video{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+.container_de {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas de igual ancho */
+    grid-template-rows: auto auto auto; /* 3 filas automáticas de altura */
+    gap: 10px; /* Espacio entre las celdas (opcional) */
+}
+hr {
+    border: none; /* Elimina el borde predeterminado */
+    border-top: 2px solid #333; /* Agrega una línea horizontal de 2 píxeles de grosor */
+    margin: 20px 0; /* Espacio superior e inferior */
+}
+.text_izq{
+    text-align: left;
+}
+.text_der{
+    text-align: right;
+}
+.barra_redes{
+    margin: 0 auto;
+    padding: 1px;
+    background-color: #333;
+    justify-content: center;
+    font-size: 20px;
+    display: flex;
+}
+.imagenes_redes{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 30px;
 }
