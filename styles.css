@@ -1,7 +1,9 @@
 *{
     color: white;
 }
-
+p{
+    font-family: 'Cinzel', sans-serif;
+}
 .contenedor{
     background-color: black;
     margin: 0%;
@@ -78,11 +80,11 @@ ul.horizontal-list li {
 }
 .div_footer{
     width: 50%;
-    height: 116px;
+    height: 75px;
     margin: 0 auto;
-    display: flex;
     padding-top: 20px;
     justify-content: space-around;
+    text-align: center;
 }
 .div_section{
     width: 80%;
@@ -158,14 +160,14 @@ h1{
 }
 .container_de {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columnas de igual ancho */
-    grid-template-rows: auto auto auto; /* 3 filas automáticas de altura */
-    gap: 10px; /* Espacio entre las celdas (opcional) */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto; 
+    gap: 10px; 
 }
 hr {
-    border: none; /* Elimina el borde predeterminado */
-    border-top: 2px solid #333; /* Agrega una línea horizontal de 2 píxeles de grosor */
-    margin: 20px 0; /* Espacio superior e inferior */
+    border: none;
+    border-top: 2px solid #333;
+    margin: 20px 0;
 }
 .text_izq{
     text-align: left;
@@ -186,4 +188,74 @@ hr {
     height: 30px;
     margin-top: 15px;
     margin-left: 30px;
+}
+ul.horizontal-list_2 li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+ul.horizontal-list_2 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Efecto de nieve https://www.youtube.com/watch?v=PimtMNytPM8  */
+
+body{
+    background-color: #222222;
+    margin: 0;
+}
+.container_n{
+    width: 0px;
+    height: 0px;
+}
+.snow{
+    background-image: url(img/snowball.png);
+    background-repeat: repeat;
+    margin-top: 120px;
+    width: 100%;
+    height: 82%;
+    top:0;
+    left:0;
+    position: absolute;
+    filter: blur(1.5px);
+}
+.little{
+    background-size: 150px 135px;
+    background-position: 0px -100px;
+    animation: snow1 14s infinite linear;
+}
+.normal{
+    animation: snow2 12s linear infinite;
+}
+.big{
+    background-size: 600px 540px;
+    background-position: 0px 90px;
+    animation: snow3 10s linear infinite;
+}
+.giant{
+    background-size: 900px 810px;
+    background-position: 150px 100px;
+    animation: snow4 8s linear infinite;
+}
+@keyframes snow1 {
+    0%{ background-position: 0px -100px;}
+    100%{ background-position: 150px 35px;}
+    
+}
+@keyframes snow2 {
+    0%{ background-position: 0px 0px;}
+    100%{ background-position: 300px 270px;}
+    
+}
+@keyframes snow3 {
+    0%{ background-position: 0px 90px;}
+    100%{ background-position: 600px 630px;}
+    
+}
+@keyframes snow4 {
+    0%{ background-position:150px 100px;}
+    100%{ background-position: 1050px 910px;}
+    
 }
