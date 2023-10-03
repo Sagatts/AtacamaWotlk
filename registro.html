@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Registro World of Atacama</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body style="background-color: rgb(44, 30, 30);">
+        <!--Navegacion-->
+        <nav class="container">
+            <div class="barra_nav">
+                <div>
+                    <a href="index.html"><img src="img/Logo_wow.png" alt="Logo WoW" class="imagen_logo_izq"></a>
+                </div>
+                <div>
+                    <a href="inicio.html" class="color_enlace">Inicio de Sesion</a>
+                    <a href="nosotros.html" class="color_enlace">Nosotros</a>
+                    <a href="index.html" class="color_enlace">Home</a>
+                </div>
+            </div>
+        </nav>
+        <!--Header Logo-->
+        <header class="color_fondo">
+            <a href="index.html">
+                <img src="img/Logo.png" alt="Logo del Servidor">
+            </a>
+        </header>
+        <section class="container">
+            <form>
+                <table id="tabla_registro">
+                    <tr>
+                        <th style="text-align: center;" colspan="2"><h1>Creación de cuenta</h1></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="name">Nombre:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="name_" maxlength="30" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lastname">Apellido:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="lastname" name="last_name" maxlength="30" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Contrasena">Contraseña:</label>
+                        </td>
+                        <td>
+                            <input type="password" id="Contrasena" name="pass" maxlength="30" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Confirmar_C">Confirmar Contraseña:</label>
+                        </td>
+                        <td>
+                            <input type="password" id="Confirmar_C" name="pass_c" maxlength="30" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Correo">Correo electronico:</label>
+                        </td>
+                        <td>
+                            <input type="email" id="Correo" name="Mail" maxlength="50" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="direccion">Direccion:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="direccion" name="Direccion" maxlength="30" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fecha_nac">Fecha de nacimiento:</label>
+                        </td>
+                        <td>
+                            <input type="date" id="fecha_nac" name="Fecha_nac" maxlength="30" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="edad">Edad:</label>
+                        </td>
+                        <td>
+                            <input type="number" id="edad" name="age" maxlength="10" required min="0" style="width: 50px;"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Sexo:</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="hombre" name="Sex" value="Hombre" required/> <label for="hombre">Hombre</label><br>
+                            <input type="radio" id="mujer" name="Sex" value="Mujer" required/> <label for="mujer">Mujer</label><br>
+                            <input type="radio" id="otro" name="Sex" value="Otro" required/> <label for="otro">Otro</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Clases que te gustan:</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="picaro" name="clases_juego" value="rogue"/> <label for="picaro">Picaro</label><br>
+                            <input type="checkbox" id="mago" name="clases_juego" value="mage"/> <label for="mago">Mago</label><br>
+                            <input type="checkbox" id="guerrero" name="clases_juego" value="warrior"/> <label for="guerrero">Guerrero</label><br>
+                            <input type="checkbox" id="druida" name="clases_juego" value="druid"/> <label for="druida">Druida</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">
+                            <button type="submit">Crear Cuenta</button>
+                        </td>
+                        <td>
+                            <input type="reset" value="Reiniciar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+        <!--Footer-->
+        <footer class="container">
+            <div class="el_footer">
+                <div class="ordenar_imagenes">
+                    <h3>Texto</h3>
+                    <p class="ordenar_texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Donec fringilla, ante ut vestibulum convallis, metus ligula finibus diam,<br> et lacinia ante dui in tortor.</p>
+                </div>
+                <div class="ordenar_imagenes">
+                    <h3>Informacion del servidor</h3>
+                    <div>Rate exp: x5</div>
+                    <div>Profesiones: x3</div>
+                    <div>Drop: x2</div>
+                </div>
+                <div class="tercer_contenido">
+                    <h3>Seguridad</h3>
+                    <div><a href="#">Términos y Condiciones</a></div>
+                    <div><a href="#">Política de Privacidad</a></div>
+                    <div><a href="#">Contáctanos</a></div>
+                </div>
+                <div class="tercer_contenido">
+                    <h3>Síguenos en:</h3>
+                    <div><a href="https://www.instagram.com/wowatacama/" target="_blank"><img src="img/Logo_IG.png" class="imagen_logo_izq"></a></div>
+                    <div><a href="https://twitter.com/WAtacama32573" target="_blank"><img src="img/Logo_Twiter.png" class="imagen_logo_izq"></a></div>
+                    <div><a href="https://discord.gg/U9pA9r9CVV" target="_blank"><img src="img/Logo_discord.png" class="imagen_logo_izq"></a></div>
+                </div>
+            </div>
+        </footer>
+        <div>
+            <p>© Copyright World of Warcraft Atacama 2023. Todos los derechos reservados.</p></th>
+        </div>
+    </body>
+</html>
