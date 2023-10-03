@@ -4,28 +4,62 @@
         <title>Registro World of Atacama</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="js/bootstrap.js"></script>
     </head>
-    <body style="background-color: rgb(44, 30, 30);">
-        <!--Navegacion-->
-        <nav class="container">
-            <div class="barra_nav">
-                <div>
-                    <a href="index.html"><img src="img/Logo_wow.png" alt="Logo WoW" class="imagen_logo_izq"></a>
+    <body>
+        <nav class="contenedor">
+            <div class="div_nav">
+                <div style="margin-right: 425px;">
+                    <div>
+                        <a href="index.html"><img src="img/Logo.png" class="logo" alt="Logo"></a>
+                    </div>
                 </div>
-                <div>
-                    <a href="inicio.html" class="color_enlace">Inicio de Sesion</a>
-                    <a href="nosotros.html" class="color_enlace">Nosotros</a>
-                    <a href="index.html" class="color_enlace">Home</a>
+                <div class="separacion_lista">
+                    <ul class="horizontal-list">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="registro.html">Iniciar Sesion</a>
+                        </li>
+                        <li>
+                            <a href="registro.html">Nosotros</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
-        <!--Header Logo-->
-        <header class="color_fondo">
-            <a href="index.html">
-                <img src="img/Logo.png" alt="Logo del Servidor">
-            </a>
+        <header class="contenedor">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/Header.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/Header_2.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/Header_3.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="container_n">
+                <div class="snow little"></div>
+                <div class="snow normal"></div>
+                <div class="snow big"></div>
+                <div class="snow giant"></div>
+            </div>
         </header>
+        <!--Header Logo-->
         <section class="container">
             <form>
                 <table id="tabla_registro">
@@ -129,34 +163,40 @@
             </form>
         </section>
         <!--Footer-->
-        <footer class="container">
-            <div class="el_footer">
-                <div class="ordenar_imagenes">
-                    <h3>Texto</h3>
-                    <p class="ordenar_texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Donec fringilla, ante ut vestibulum convallis, metus ligula finibus diam,<br> et lacinia ante dui in tortor.</p>
+        <div class="barra_redes">
+            <div class="texto_redes"><p>Siguenos en: </p></div>
+            <div><a href="https://www.instagram.com/wowatacama/" target="_blank"><img src="img/Logo_instagram.png" alt="Instagram" class="imagenes_redes"></a></div>
+            <div><a href="https://twitter.com/WAtacama32573" target="_blank"><img src="img/Logo_twitter_.png" alt="Instagram" class="imagenes_redes"></a></div>
+            <div><a href="https://discord.gg/U9pA9r9CVV" target="_blank"><img src="img/Logo_DC.png" alt="Instagram" class="imagenes_redes"></a></div>
+        </div>
+        <footer class="contenedor">
+            <div class="div_footer">
+                <div class="separacion_lista_foter">
+                    <ul class="horizontal-list_2">
+                        <li>
+                            <a href="index.html">Términos de Uso</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Política de cookies</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Reglas</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Armeria</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Calculadora de talentos</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Descargas</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="ordenar_imagenes">
-                    <h3>Informacion del servidor</h3>
-                    <div>Rate exp: x5</div>
-                    <div>Profesiones: x3</div>
-                    <div>Drop: x2</div>
-                </div>
-                <div class="tercer_contenido">
-                    <h3>Seguridad</h3>
-                    <div><a href="#">Términos y Condiciones</a></div>
-                    <div><a href="#">Política de Privacidad</a></div>
-                    <div><a href="#">Contáctanos</a></div>
-                </div>
-                <div class="tercer_contenido">
-                    <h3>Síguenos en:</h3>
-                    <div><a href="https://www.instagram.com/wowatacama/" target="_blank"><img src="img/Logo_IG.png" class="imagen_logo_izq"></a></div>
-                    <div><a href="https://twitter.com/WAtacama32573" target="_blank"><img src="img/Logo_Twiter.png" class="imagen_logo_izq"></a></div>
-                    <div><a href="https://discord.gg/U9pA9r9CVV" target="_blank"><img src="img/Logo_discord.png" class="imagen_logo_izq"></a></div>
+                <div>
+                    <p>© Copyright World of Warcraft Atacama 2023. Todos los derechos reservados.</p></th>
                 </div>
             </div>
         </footer>
-        <div>
-            <p>© Copyright World of Warcraft Atacama 2023. Todos los derechos reservados.</p></th>
-        </div>
     </body>
 </html>
