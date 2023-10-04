@@ -2,16 +2,15 @@ $modal-footer-bg: black;
 
 @import "./css/bootstrap.css";
 
-.texto_blanco{
+*{
     color: white;
 }
-
 a{
     color: white;
 }
 
 .link_modal{
-    color: black;
+    color: rgb(109, 108, 223);
 }
 
 p{
@@ -96,15 +95,17 @@ ul.horizontal-list li {
 }
 .div_footer{
     width: 50%;
-    height: 75px;
+    height: auto;
     margin: 0 auto;
     padding-top: 20px;
     justify-content: space-around;
     text-align: center;
+    color: white;
+    padding-bottom: 10px;
 }
 .div_section{
     width: 80%;
-    height: 980px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     padding-top: 10px;
@@ -119,6 +120,22 @@ ul.horizontal-list li {
     margin: 0%;
     width: 25%;
     height: 300px;
+}
+.contenedor_form{
+    margin: auto;
+    width: 60%;
+    background-color: #333 ;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.texto_centrado{
+    text-align: center;
+    a{
+        color: rgb(77, 91, 221);
+    }
 }
 .color_fondo_derecho{
     background-color: rgb(27, 27, 27);
@@ -214,6 +231,9 @@ ul.horizontal-list_2 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+.separacion_footer{
+    margin-bottom: 15px;
 }
 
 /* Efecto de nieve https://www.youtube.com/watch?v=PimtMNytPM8  */

@@ -21,15 +21,38 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="registro.html">Iniciar Sesion</a>
+                            <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Iniciar Sesion
+                            </a>
                         </li>
                         <li>
-                            <a href="registro.html">Nosotros</a>
+                            <a href="#">Nosotros</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content bg-dark">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Inicio de sesion</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="recipient-name" class="col-form-label">Usuario:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                    <label for="recipient-name" class="col-form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="recipient-name">
+                </div>
+                <div class="modal-footer">
+                    <p>No tienes cuenta? <a href="registro.html" class="link_modal">Registrate</a></p>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Iniciar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <header class="contenedor">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -60,138 +83,96 @@
             </div>
         </header>
         <!--Header Logo-->
-        <section class="container">
-            <form>
-                <table id="tabla_registro">
-                    <tr>
-                        <th style="text-align: center;" colspan="2"><h1>Creación de cuenta</h1></th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="name">Nombre:</label>
-                        </td>
-                        <td>
-                            <input type="text" id="name" name="name_" maxlength="30" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="lastname">Apellido:</label>
-                        </td>
-                        <td>
-                            <input type="text" id="lastname" name="last_name" maxlength="30" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="Contrasena">Contraseña:</label>
-                        </td>
-                        <td>
-                            <input type="password" id="Contrasena" name="pass" maxlength="30" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="Confirmar_C">Confirmar Contraseña:</label>
-                        </td>
-                        <td>
-                            <input type="password" id="Confirmar_C" name="pass_c" maxlength="30" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="Correo">Correo electronico:</label>
-                        </td>
-                        <td>
-                            <input type="email" id="Correo" name="Mail" maxlength="50" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="direccion">Direccion:</label>
-                        </td>
-                        <td>
-                            <input type="text" id="direccion" name="Direccion" maxlength="30" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="fecha_nac">Fecha de nacimiento:</label>
-                        </td>
-                        <td>
-                            <input type="date" id="fecha_nac" name="Fecha_nac" maxlength="30" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="edad">Edad:</label>
-                        </td>
-                        <td>
-                            <input type="number" id="edad" name="age" maxlength="10" required min="0" style="width: 50px;"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>Sexo:</label>
-                        </td>
-                        <td>
-                            <input type="radio" id="hombre" name="Sex" value="Hombre" required/> <label for="hombre">Hombre</label><br>
-                            <input type="radio" id="mujer" name="Sex" value="Mujer" required/> <label for="mujer">Mujer</label><br>
-                            <input type="radio" id="otro" name="Sex" value="Otro" required/> <label for="otro">Otro</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>Clases que te gustan:</label>
-                        </td>
-                        <td>
-                            <input type="checkbox" id="picaro" name="clases_juego" value="rogue"/> <label for="picaro">Picaro</label><br>
-                            <input type="checkbox" id="mago" name="clases_juego" value="mage"/> <label for="mago">Mago</label><br>
-                            <input type="checkbox" id="guerrero" name="clases_juego" value="warrior"/> <label for="guerrero">Guerrero</label><br>
-                            <input type="checkbox" id="druida" name="clases_juego" value="druid"/> <label for="druida">Druida</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: right;">
-                            <button type="submit">Crear Cuenta</button>
-                        </td>
-                        <td>
-                            <input type="reset" value="Reiniciar">
-                        </td>
-                    </tr>
-                </table>
-            </form>
+        <section>
+            <div class="contenedor_form">
+                <h1>Registro</h1>
+                <form class="row g-3 needs-validation" novalidate> 
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono">
+                    </div>
+                    <div class="col-sm-12">
+                        <input type="email" class="form-control" placeholder="Correo Electronico" id="inputEmail3">
+                    </div>
+                    <div class="col-6">
+                        <select id="inputState" class="form-select" placeholder="Genero">
+                            <option disabled selected>Selecciona tu género</option>
+                            <option>Hombre</option>
+                            <option>Mujer</option>
+                            <option>Otro</option>
+                            <option>Prefiero no decirlo</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <input type="date" class="form-control" id="fecha" name="fecha">
+                    </div>
+                    <div class="col-6">
+                        <select id="inputState" class="form-select" placeholder="Genero">
+                            <option disabled selected>Selecciona tu comuna</option>
+                            <option>Copiapó</option>
+                            <option>Tierra Amarilla</option>
+                            <option>Caldera</option>
+                            <option>Otra</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Nombre de personaje" aria-label="Nombre de personaje">
+                    </div>
+                    <div class="col-6">
+                        <textarea class="form-control" placeholder="Direccion del hogar" id="floatingTextarea2" style="height: 100px"></textarea>
+                    </div>
+                    <div class="col-6">
+                        <textarea class="form-control" placeholder="Direccion de oficina" id="floatingTextarea2" style="height: 100px"></textarea>
+                    </div>
+                    <div class="col-6">
+                        <input type="password" class="form-control" id="Contraseña" placeholder="Contraseña">
+                    </div>
+                    <div class="col-6">
+                        <input type="password" class="form-control" id="Contraseña_Confir" placeholder="Confirmar contraseña">
+                    </div>
+                    <div class="col-7">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        Acepto los Términos y Condiciones y la Política de Privacidad
+                        </label>
+                    </div>
+                    <div class="col-7">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                        Quiero recibir las mejores ofertas y mejorar
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <p class="texto_centrado">Ya estas registrado? Inicia Sesion <a href="index.html" class="link_modal">Aqui</a></p>
+                </form>
+            </div>
         </section>
         <!--Footer-->
-        <div class="barra_redes">
-            <div class="texto_redes"><p>Siguenos en: </p></div>
-            <div><a href="https://www.instagram.com/wowatacama/" target="_blank"><img src="img/Logo_instagram.png" alt="Instagram" class="imagenes_redes"></a></div>
-            <div><a href="https://twitter.com/WAtacama32573" target="_blank"><img src="img/Logo_twitter_.png" alt="Instagram" class="imagenes_redes"></a></div>
-            <div><a href="https://discord.gg/U9pA9r9CVV" target="_blank"><img src="img/Logo_DC.png" alt="Instagram" class="imagenes_redes"></a></div>
-        </div>
         <footer class="contenedor">
             <div class="div_footer">
-                <div class="separacion_lista_foter">
-                    <ul class="horizontal-list_2">
-                        <li>
-                            <a href="index.html">Términos de Uso</a>
-                        </li>
-                        <li>
-                            <a href="index.html">Política de cookies</a>
-                        </li>
-                        <li>
-                            <a href="index.html">Reglas</a>
-                        </li>
-                        <li>
-                            <a href="index.html">Armeria</a>
-                        </li>
-                        <li>
-                            <a href="index.html">Calculadora de talentos</a>
-                        </li>
-                        <li>
-                            <a href="index.html">Descargas</a>
-                        </li>
-                    </ul>
+                <div class="container text-center separacion_footer">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        Términos de Uso
+                      </div>
+                      <div class="col">
+                        Política de cookies
+                      </div>
+                      <div class="col">
+                        Reglas
+                      </div>
+                      <div class="col">
+                        Descargas
+                      </div>
+                    </div>
                 </div>
                 <div>
                     <p>© Copyright World of Warcraft Atacama 2023. Todos los derechos reservados.</p></th>
