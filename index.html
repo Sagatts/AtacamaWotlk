@@ -10,31 +10,42 @@
 <body>
     <nav class="contenedor">
         <div  class="navbar navbar-expand-lg bg-body-tertiary">
-            <div style="margin-right: 425px;">
-                <div>
-                    <a href="index.html"><img src="img/Logo.png" class="logo" alt="Logo"></a>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Barra de navegacion</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Media
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                  </form>
                 </div>
-            </div>
-            <div class="separacion_lista">
-                <ul class="horizontal-list">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            Iniciar Sesion
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Nosotros</a>
-                    </li>
-                </ul>
-            </div>
+              </div>
         </div>
     </nav>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content bg-dark">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">Inicio de sesion</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -54,6 +65,7 @@
         </div>
       </div>
     <header class="contenedor">
+        <a href="index.html"><img src="img/Logo.png" class="logo" alt="Logo"></a>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -84,83 +96,66 @@
     </header>
     <section>
         <div class="div_section">
-            <div class="contenedor_2">
-                <div class="color_fondo_izquierdo">
-                    <h1 class="wow-text">World of Warcraft Atacama</h1>
-                    <p class="texto_blanco">Sumérgete en el emocionante mundo de World of Warcraft 3.3.5a, un juego de rol en línea donde podrás crear tu propio héroe y explorar el vasto reino de Azeroth. 
-                        Elige entre diversas razas y clases, enfrenta monstruos épicos, resuelve acertijos y forma alianzas con jugadores de todo el mundo. 
-                        Ya sea que te guste el combate táctico, la exploración o las desafiantes mazmorras, este juego te ofrece infinitas posibilidades y diversión. 
-                        Únete a una comunidad apasionada y forja tu propia leyenda en este emocionante servidor de World of Warcraft 3.3.5a. ¡La aventura te espera! </p>
-                </div>
-                <div class="color_fondo_izquierdo">
-                    <h1 class="wow-text">¿En quien te transformaras?</h1>
-                    <p class="texto_blanco">Transformate en el heroe que te imaginas. ¿Que sera? ¿Un fuerte orco guerrero? ¿ O talvez en un honorable humano paladin?, Tu tienes que escoger, pero debes decidir en que faccion estar.</p>
-                    <img src="img/Horda_vs_Alianza.jpg" alt="Horda_vs_Alianza" class="facciones_img">
-                    <div class="facciones">
-                        <a href="" class="boton">Por la Horda</a>
-                        <a href="" class="boton">Por la Alianza</a>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor_derecho">
-                <div class="color_fondo_derecho">
-                    <div class="container_de texto_blanco">
-                        <div class="text_izq">Atacama Wotlk</div>
-                        <div class="text_der">1405</div>
-                        <div class="text_izq">Login</div>
-                        <div class="text_der">Online</div>
-                        <div class="text_izq">Hora</div>
-                        <div class="text_der">15:43</div>
-                    </div>
-                    <hr>
-                    <div class="texto_blanco">
-                        logon.atacamawotlk.com
-                    </div>
-                </div>
-                <div class="color_fondo_derecho">
-                    <a href="https://www.wowhead.com/wotlk/es" target="_blank"><img src="img/WoWHead.webp" alt="WoWHead" class="img_derecha"></a>
-                </div>
-                <div class="color_fondo_derecho">
-                    <a href="https://wowtbc.gg/wotlk/class-rankings/pve-rankings/" target="_blank"><img src="img/wowTBC.png" alt="WoWHead" class="img_derecha"></a>
+            <div class="container text-center">
+                <div class="row align-items-start">
+                  <div class="col">
+                    <div class="card">
+                        <img src="./img/Horda.webp" class="card-img-top facciones_img" alt="Horda">
+                      
+                        <div class="card-body">
+                          <h5 class="wow-text card-title">La Horda</h5>
+                          <p class="card-text text_negro">La Horda es una de las dos facciones políticas más numerosa de las razas de Azeroth, en contrapartida a la Alianza. Es un grupo de supervivientes que han superado toda clase de adversidades, desde mundos destruidos a destierros, pasando por conflictos familiares y relaciones con aliados incómodos.</p>
+                          <a href="#" class="btn btn-primary">Por la Horda</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                        <img src="./img/Alianza.webp" class="card-img-top facciones_img" alt="Alianza">
+                        <div class="card-body">
+                          <h5 class="wow-text card-title">La Alianza</h5>
+                          <p class="card-text text_negro">La Alianza es una de las dos facciones políticas más numerosa de las razas de Azeroth, en contrapartida a la Horda. La Alianza abarca una gran cantidad de poderosas culturas y grupos unidas no por la desesperación o la necesidad, sino por un profundo compromiso con conceptos abstractos como la nobleza y la justicia.</p>
+                          <a href="#" class="btn btn-primary">Por la Alianza</a>
+                        </div>
+                      </div>
+                  </div>
                 </div>
             </div>
-        </div>
-        <div class="video">
-            <iframe width="102%" height="750px" src="https://www.youtube.com/embed/bXMsx1hnvo8?si=BZb_DuZWtlJVeSvt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </section>
-    <div class="barra_redes">
-        <div class="texto_redes"><p class="texto_blanco">Siguenos en: </p></div>
-        <div><a href="https://www.instagram.com/wowatacama/" target="_blank"><img src="img/Logo_instagram.png" alt="Instagram" class="imagenes_redes"></a></div>
-        <div><a href="https://twitter.com/WAtacama32573" target="_blank"><img src="img/Logo_twitter_.png" alt="Instagram" class="imagenes_redes"></a></div>
-        <div><a href="https://discord.gg/U9pA9r9CVV" target="_blank"><img src="img/Logo_DC.png" alt="Instagram" class="imagenes_redes"></a></div>
-    </div>
-    <footer class="contenedor">
-        <div class="div_footer">
-            <div class="separacion_lista_foter">
-                <ul class="horizontal-list_2">
-                    <li>
-                        <a href="index.html">Términos de Uso</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Política de cookies</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Reglas</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Armeria</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Calculadora de talentos</a>
-                    </li>
-                    <li>
-                        <a href="index.html">Descargas</a>
-                    </li>
-                </ul>
+        <div class="div_section_2">
+            <div class="text-center">
+                <img src="img/Logo_wow.png" class="logo_wow rounded" alt="...">
             </div>
             <div>
-                <p class="texto_blanco">© Copyright World of Warcraft Atacama 2023. Todos los derechos reservados.</p></th>
+                <h1 class="fs-1 text-center wow-text">World of Warcraft Atacama</h1>
+                <p class="text-center">Sumérgete en el emocionante mundo de World of Warcraft 3.3.5a, un juego de rol en línea donde podrás crear tu propio héroe y explorar el vasto reino de Azeroth. Elige entre diversas razas y clases, enfrenta monstruos épicos, resuelve acertijos y forma alianzas con jugadores de todo el mundo. Ya sea que te guste el combate táctico, la exploración o las desafiantes mazmorras, este juego te ofrece infinitas posibilidades y diversión.
+                    Únete a una comunidad apasionada y forja tu propia leyenda en este emocionante servidor de World of Warcraft 3.3.5a. ¡La aventura te espera!</p>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary btn-lg">Primario</button>
+                <button type="button" class="btn btn-secondary  btn-lg">Secundario</button>
+            </div>
+        </div>
+    </section>
+    <footer class="contenedor">
+        <div class="div_footer">
+            <div class="container text-center separacion_footer">
+                <div class="row align-items-start">
+                  <div class="col">
+                    Términos de Uso
+                  </div>
+                  <div class="col">
+                    Política de cookies
+                  </div>
+                  <div class="col">
+                    Reglas
+                  </div>
+                  <div class="col">
+                    Descargas
+                  </div>
+                </div>
+            </div>
+            <div>
+                <p>© Copyright World of Warcraft Atacama 2023. Todos los derechos reservados.</p></th>
             </div>
         </div>
     </footer>

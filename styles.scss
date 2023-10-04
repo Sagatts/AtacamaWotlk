@@ -1,5 +1,3 @@
-$modal-footer-bg: black;
-
 @import "./css/bootstrap.css";
 
 *{
@@ -7,6 +5,14 @@ $modal-footer-bg: black;
 }
 a{
     color: white;
+}
+
+@mixin color_letra($color_t){
+    color: $color_t;
+}
+
+.text_negro{
+    @include color_letra(black)
 }
 
 .link_modal{
@@ -110,10 +116,13 @@ ul.horizontal-list li {
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    display: flex;
     padding-top: 10px;
     padding-bottom: 20px;
     font-size: 20px;
+    margin-top: 40px;
+}
+.div_section_2{
+    margin-top: 50px;
 }
 .contenedor_2{
     margin-right: 40px;
@@ -161,18 +170,9 @@ h1{
     padding: 10px;
     text-align: center;
 }
-.facciones{
-    display: flex;
-    margin: 0 auto;
-    text-align: center;
-    width: 50%;
-    justify-content: space-around;
-}
 .facciones_img{
-    height: 400px;
-    margin-right: 20px;
-    border-radius: 5%;
-    width: 900px;
+    height: 500px;
+    width: 100%;
 }
 .wow-text {
     font-family: 'Cinzel', sans-serif;
@@ -219,11 +219,9 @@ hr {
     font-size: 20px;
     display: flex;
 }
-.imagenes_redes{
-    width: 30px;
-    height: 30px;
-    margin-top: 15px;
-    margin-left: 30px;
+.logo_wow{
+    width: 150px;
+    height: 150px;
 }
 ul.horizontal-list_2 li {
     display: inline;
