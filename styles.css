@@ -12,6 +12,10 @@ a {
   color: black;
 }
 
+.text_blanco {
+  color: white;
+}
+
 .link_modal {
   color: rgb(109, 108, 223);
 }
@@ -35,8 +39,8 @@ nav {
 }
 
 footer {
-  background-image: url(img/Background_nav.jpg);
   border-top: 3px solid gray;
+  height: 125px;
 }
 
 header {
@@ -50,6 +54,11 @@ section {
   border-bottom: 3px solid gray;
 }
 
+.contenedor_logo {
+  margin: auto;
+  width: 100%;
+}
+
 .logo {
   height: auto;
   background-repeat: no-repeat;
@@ -60,7 +69,7 @@ section {
   width: 20%;
   display: block;
   margin: 0 auto;
-  top: 660px;
+  top: 80%;
   left: 40%;
 }
 
@@ -115,8 +124,7 @@ ul.horizontal-list li {
 }
 
 .div_footer {
-  width: 50%;
-  height: auto;
+  height: 110%;
   margin: 0 auto;
   padding-top: 20px;
   justify-content: space-around;
@@ -288,7 +296,7 @@ body {
   background-repeat: repeat;
   margin-top: 60px;
   width: 100%;
-  height: 74%;
+  height: 80%;
   top: 0;
   left: 0;
   position: absolute;

@@ -14,6 +14,9 @@ a{
 .text_negro{
     @include color_letra(black)
 }
+.text_blanco{
+    @include color_letra(white)
+}
 
 .link_modal{
     color: rgb(109, 108, 223);
@@ -25,6 +28,7 @@ p{
 body{
     margin: auto;
 }
+
 .contenedor{
     background-color: black;
     margin: 0%;
@@ -34,8 +38,8 @@ nav{
     border-bottom: 3px solid gray;
 }
 footer{
-    background-image: url(img/Background_nav.jpg);
     border-top: 3px solid gray;
+    height: 125px;
 }
 header{
     height: auto;
@@ -45,6 +49,10 @@ section{
     background-color: rgb(8, 7, 8);
     margin: 0;
     border-bottom: 3px solid gray;
+}
+.contenedor_logo{
+    margin: auto;
+    width: 100%;
 }
 
 .logo{
@@ -57,7 +65,7 @@ section{
     width: 20%;
     display: block;
     margin: 0 auto;
-    top: 660px;
+    top: 80%;
     left: 40%;
 }
 .navegacion{
@@ -103,8 +111,7 @@ ul.horizontal-list li {
     margin-right: 100px;
 }
 .div_footer{
-    width: 50%;
-    height: auto;
+    height: 110%;
     margin: 0 auto;
     padding-top: 20px;
     justify-content: space-around;
@@ -252,7 +259,7 @@ body{
     background-repeat: repeat;
     margin-top: 60px;
     width: 100%;
-    height: 74%;
+    height: 80%;
     top:0;
     left:0;
     position: absolute;
