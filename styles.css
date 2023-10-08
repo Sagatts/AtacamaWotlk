@@ -61,16 +61,13 @@ section {
 
 .logo {
   height: auto;
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
   position: absolute;
   z-index: 1;
   text-align: center;
   width: 20%;
   display: block;
   margin: 0 auto;
-  top: 80%;
-  left: 40%;
+  margin-right: 400px;
 }
 
 .navegacion {
