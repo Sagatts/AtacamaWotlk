@@ -20,20 +20,23 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="registro.html">Registrarse</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                </ul>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 25px;">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="registro.html">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="foro.html">Foro</a>
+                </li>
+            </ul>
             </div>
         </div>
     </div>
@@ -100,52 +103,97 @@
             </div>
         </div>
     </div>
-            <div class="contenedor_form">
+            <div class="contenedor_form" style="font-size: 17px;">
                 <h1>Registro</h1>
                 <form class="row g-3 needs-validation" novalidate> 
                     <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                      <label for="inombre">Nombre:</label>
+                        <input type="text" class="form-control" aria-label="Nombre" id="inombre" required>
+                        <div class="invalid-feedback">
+                            Por favor ingrese el nombre.
+                        </div>
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
-                    </div>
-                    <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario">
-                    </div>
-                    <div class="col-6">
-                      <input type="text" class="form-control" placeholder="Recluta un amigo: Ingresa su nombre" aria-label="Nombre de amigo">
+                      <label for="iapellido">Apellido:</label>
+                        <input type="text" class="form-control" aria-label="Apellido" id="iapellido" required>
+                        <div class="invalid-feedback">
+                          Por favor ingrese el apellido.
+                      </div>
                     </div>
                     <div class="col-sm-12">
-                        <input type="email" class="form-control" placeholder="Correo Electronico" id="inputEmail3">
+                      <label for="icorreo">Correo Electronico:</label>
+                      <input type="email" class="form-control" id="icorreo" required>
+                      <div class="invalid-feedback">
+                        Por favor ingrese el correo.
                     </div>
-                    <div class="col-6">
-                        <select id="inputState" class="form-select" placeholder="Genero">
-                            <option disabled selected>Selecciona tu género</option>
-                            <option>Hombre</option>
-                            <option>Mujer</option>
-                            <option>Otro</option>
-                            <option>Prefiero no decirlo</option>
+                    </div>
+                      <label>Fecha de nacimiento:</label>
+                      <div class="col-3">
+                        <input type="text" class="form-control" id="idia" name="dia" placeholder="Dia" required>
+                        <div class="invalid-feedback">
+                          Por favor ingrese el dia.
+                      </div>
+                      </div>
+                      <div class="col-6">
+                        <select class="form-select" aria-label="Default select example" id="imes" required>
+                          <option selected disabled value="" style="color: black;">Mes</option>
+                          <option value="01" style="color: black;">Enero</option>
+                          <option value="02" style="color: black;">Febrero</option>
+                          <option value="03" style="color: black;">Marzo</option>
+                          <option value="04" style="color: black;">Abril</option>
+                          <option value="05" style="color: black;">Mayo</option>
+                          <option value="06" style="color: black;">Junio</option>
+                          <option value="07" style="color: black;">Julio</option>
+                          <option value="08" style="color: black;">Agosto</option>
+                          <option value="09" style="color: black;">Septiembre</option>
+                          <option value="10" style="color: black;">Octubre</option>
+                          <option value="11" style="color: black;">Noviembre</option>
+                          <option value="12" style="color: black;">Diciembre</option>
                         </select>
+                        <div class="invalid-feedback">
+                          Por favor ingrese el mes.
+                        </div>
+                    </div>
+                    <div class="col-3">
+                      <input type="text" class="form-control" id="iaño" name="año" placeholder="Año" required>
+                      <div class="invalid-feedback">
+                        Por favor ingrese el año.
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <label>Nombre de Usuario:</label>
+                        <input type="text" class="form-control" aria-label="Usuario" id="iusuario" required>
+                        <div class="invalid-feedback">
+                          Por favor ingrese el usuario.
+                        </div>
                     </div>
                     <div class="col-6">
-                        <input type="date" class="form-control" id="fecha" name="fecha">
+                      <label>Contraseña:</label>
+                        <input type="password" class="form-control" id="icontraseña" required>
+                        <div class="invalid-feedback">
+                          Por favor ingrese la contraseña.
+                        </div>
                     </div>
                     <div class="col-6">
-                        <input type="password" class="form-control" id="Contraseña" placeholder="Contraseña">
-                    </div>
-                    <div class="col-6">
-                        <input type="password" class="form-control" id="Contraseña_Confir" placeholder="Confirmar contraseña">
+                      <label>Confirmar contraseña:</label>
+                        <input type="password" class="form-control" id="icontraseña_confir" required>
+                        <div class="invalid-feedback">
+                          Por favor confirme la contraseña.
+                        </div>
                     </div>
                     <div class="col-10">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="" id="iterminos" required>
+                        <label class="form-check-label" for="iterminos">
                         Acepto los Términos y Condiciones y la Política de Privacidad
                         </label>
+                        <div class="invalid-feedback">
+                          Debes aceptar antes de enviar.
+                        </div>
                     </div>
                     <div class="col-10">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                        <label class="form-check-label" for="flexCheckChecked">
-                        Quiero recibir las mejores ofertas y mejorar
+                        <input class="form-check-input" type="checkbox" value="" id="imejoras">
+                        <label class="form-check-label" for="imejoras">
+                        Quiero recibir avisos de las actualizaciones (opcional).
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Registrar</button>
@@ -210,5 +258,26 @@
           </div>
         </div>
       </footer>
+      <script>
+                  // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+              form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+              }, false)
+            })
+          })()
+      </script>
     </body>
 </html>
