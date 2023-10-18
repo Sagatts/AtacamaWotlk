@@ -28,13 +28,10 @@
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="registro.html">Registrarse</a>
+                  <a class="nav-link active" href="registro.php">Registrarse</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="nosotros.html">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="foro.html">Foro</a>
                 </li>
             </ul>
             </div>
@@ -105,37 +102,37 @@
     </div>
             <div class="contenedor_form" style="font-size: 17px;">
                 <h1>Registro</h1>
-                <form class="row g-3 needs-validation" novalidate> 
+                <form action="insertar.php" method="GET" class="row g-3 needs-validation" novalidate> 
                     <div class="col-6">
                       <label for="inombre">Nombre:</label>
-                        <input type="text" class="form-control" aria-label="Nombre" id="inombre" required>
+                        <input type="text" class="form-control" name="name_" id="inombre" required>
                         <div class="invalid-feedback">
                             Por favor ingrese el nombre.
                         </div>
                     </div>
                     <div class="col-6">
                       <label for="iapellido">Apellido:</label>
-                        <input type="text" class="form-control" aria-label="Apellido" id="iapellido" required>
+                        <input type="text" class="form-control" name="Apellido" id="iapellido" required>
                         <div class="invalid-feedback">
                           Por favor ingrese el apellido.
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <label for="icorreo">Correo Electronico:</label>
-                      <input type="email" class="form-control" id="icorreo" required>
+                      <input type="email" class="form-control" id="icorreo" name="Correo" required>
                       <div class="invalid-feedback">
                         Por favor ingrese el correo.
                     </div>
                     </div>
                       <label>Fecha de nacimiento:</label>
                       <div class="col-3">
-                        <input type="text" class="form-control" id="idia" name="dia" placeholder="Dia" required>
+                        <input type="text" class="form-control" id="idia" name="dia_" placeholder="Dia" required>
                         <div class="invalid-feedback">
                           Por favor ingrese el dia.
                       </div>
                       </div>
                       <div class="col-6">
-                        <select class="form-select" aria-label="Default select example" id="imes" required>
+                        <select class="form-select" aria-label="Default select example" id="imes" name="mes_" required>
                           <option selected disabled value="" style="color: black;">Mes</option>
                           <option value="01" style="color: black;">Enero</option>
                           <option value="02" style="color: black;">Febrero</option>
@@ -155,34 +152,34 @@
                         </div>
                     </div>
                     <div class="col-3">
-                      <input type="text" class="form-control" id="iaño" name="año" placeholder="Año" required>
+                      <input type="text" class="form-control" id="iaño" name="ano_" placeholder="Año" required>
                       <div class="invalid-feedback">
                         Por favor ingrese el año.
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <label>Nombre de Usuario:</label>
-                        <input type="text" class="form-control" aria-label="Usuario" id="iusuario" required>
+                        <input type="text" class="form-control" name="user" required>
                         <div class="invalid-feedback">
                           Por favor ingrese el usuario.
                         </div>
                     </div>
                     <div class="col-6">
                       <label>Contraseña:</label>
-                        <input type="password" class="form-control" id="icontraseña" required>
+                        <input type="password" class="form-control" name="Contraseña_" id="icontraseña" required>
                         <div class="invalid-feedback">
                           Por favor ingrese la contraseña.
                         </div>
                     </div>
                     <div class="col-6">
                       <label>Confirmar contraseña:</label>
-                        <input type="password" class="form-control" id="icontraseña_confir" required>
+                        <input type="password" class="form-control" id="icontraseña_confir" name="Confirmar_contra_" required>
                         <div class="invalid-feedback">
                           Por favor confirme la contraseña.
                         </div>
                     </div>
                     <div class="col-10">
-                        <input class="form-check-input" type="checkbox" value="" id="iterminos" required>
+                        <input class="form-check-input" type="checkbox" value="" id="iterminos" name="Terminos_" required>
                         <label class="form-check-label" for="iterminos">
                         Acepto los Términos y Condiciones y la Política de Privacidad
                         </label>
@@ -191,7 +188,7 @@
                         </div>
                     </div>
                     <div class="col-10">
-                        <input class="form-check-input" type="checkbox" value="" id="imejoras">
+                        <input class="form-check-input" type="checkbox" value="" id="imejoras" name="Mejoras_">
                         <label class="form-check-label" for="imejoras">
                         Quiero recibir avisos de las actualizaciones (opcional).
                         </label>

@@ -42,9 +42,6 @@
                     <li class="nav-item">
                       <a class="nav-link" href="nosotros.html">Nosotros</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="foro.html">Foro</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -141,18 +138,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <?php
-                                            while($row=mysqli_fetch_array($query)){
-                                        ?>
-                                            <tr>
-                                                <th><?php  echo $row['Nombre']?></th>
-                                                <th><?php  echo $row['Apellido']?></th>
-                                                <th><?php  echo $row['Correo']?></th>
-                                                <th><?php  echo $row['Fecha_nacimiento']?></th>                                         
-                                            </tr>
-                                        <?php 
-                                            }
-                                        ?>
+                                        
                                 </tbody>
                             </table>
                         </div>
