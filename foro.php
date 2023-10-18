@@ -1,11 +1,20 @@
+<?php 
+    include("conexion.php");
+    $con=conectar();
+
+    $sql="SELECT Nombre, Apellido, Correo, Fecha_nacimiento FROM cuentaswow";
+    $query=mysqli_query($con,$sql);
+
+    $row=mysqli_fetch_array($query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="js/bootstrap.js"></script>
-    <title>World of Warcraft Atacama</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/bootstrap.js"></script>
+  <title>Foro WoW Atacama</title>
 </head>
 <body>
   <nav class="contenedor">
@@ -93,8 +102,62 @@
           </div>
         </div>
     </header>
-    <section>
-    
+    <section style="background-color: white">
+      <div class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style=" border-bottom: 3px solid gray;">
+        <div class="container-fluid" style="width: 60%;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
+              <div style="font-size: 25px;">
+                <a class="nav-link active" aria-current="page" href="index.html">World of Warcraft Atacama</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+                    <div class="row"> 
+                        
+                        <div class="col-md-3">
+                            <h1>Ingrese datos</h1>
+                                <form action="insertar.php" method="POST">
+
+                                    <input type="text" class="form-control mb-3" name="cod_estudiante" placeholder="cod estudiante">
+                                    <input type="text" class="form-control mb-3" name="dni" placeholder="Dni">
+                                    <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres">
+                                    <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos">
+                                    
+                                    <input type="submit" class="btn btn-primary">
+                                </form>
+                        </div>
+
+                        <div class="col-md-8">
+                            <table class="table" >
+                                <thead class="table-success table-striped" >
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Correo</th>
+                                        <th>Fecha de nacimiento</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <?php
+                                            while($row=mysqli_fetch_array($query)){
+                                        ?>
+                                            <tr>
+                                                <th><?php  echo $row['Nombre']?></th>
+                                                <th><?php  echo $row['Apellido']?></th>
+                                                <th><?php  echo $row['Correo']?></th>
+                                                <th><?php  echo $row['Fecha_nacimiento']?></th>                                         
+                                            </tr>
+                                        <?php 
+                                            }
+                                        ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+            </div>
     </section>
     <footer class="contenedor" >
       <div class="navbar-expand-lg bg-body-tertiary div_footer" data-bs-theme="dark" >
