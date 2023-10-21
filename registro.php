@@ -112,7 +112,7 @@
                     </div>
                     <div class="col-6">
                       <label for="iapellido">Apellido:</label>
-                        <input type="text" class="form-control" name="Apellido" id="iapellido" required>
+                        <input type="text" class="form-control" name="apellido_" id="iapellido" required>
                         <div class="invalid-feedback">
                           Por favor ingrese el apellido.
                       </div>
@@ -159,27 +159,27 @@
                     </div>
                     <div class="col-sm-12">
                       <label>Nombre de Usuario:</label>
-                        <input type="text" class="form-control" name="user" required>
+                        <input type="text" class="form-control" name="user_" required>
                         <div class="invalid-feedback">
                           Por favor ingrese el usuario.
                         </div>
                     </div>
                     <div class="col-6">
                       <label>Contraseña:</label>
-                        <input type="password" class="form-control" name="Contraseña_" id="icontraseña" required>
+                        <input type="password" class="form-control" name="contrasena_" id="icontraseña" required>
                         <div class="invalid-feedback">
                           Por favor ingrese la contraseña.
                         </div>
                     </div>
                     <div class="col-6">
                       <label>Confirmar contraseña:</label>
-                        <input type="password" class="form-control" id="icontraseña_confir" name="Confirmar_contra_" required>
+                        <input type="password" class="form-control" id="icontrasena_confir" name="confirmar_contra_" required>
                         <div class="invalid-feedback">
                           Por favor confirme la contraseña.
                         </div>
                     </div>
                     <div class="col-10">
-                        <input class="form-check-input" type="checkbox" value="" id="iterminos" name="Terminos_" required>
+                        <input class="form-check-input" type="checkbox" value="Si" id="iterminos" name="terminos_" required>
                         <label class="form-check-label" for="iterminos">
                         Acepto los Términos y Condiciones y la Política de Privacidad
                         </label>
@@ -188,7 +188,7 @@
                         </div>
                     </div>
                     <div class="col-10">
-                        <input class="form-check-input" type="checkbox" value="" id="imejoras" name="Mejoras_">
+                        <input class="form-check-input" type="checkbox" value="" id="imejoras" name="mejoras_">
                         <label class="form-check-label" for="imejoras">
                         Quiero recibir avisos de las actualizaciones (opcional).
                         </label>

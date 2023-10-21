@@ -1,11 +1,9 @@
-<?php 
-    include("conexion.php");
-    $con=conectar();
+<?php
+  include("conexion.php");
+  $con = conectar();
 
-    $sql="SELECT Nombre, Apellido, Correo, Fecha_nacimiento FROM cuentaswow";
-    $query=mysqli_query($con,$sql);
-
-    $row=mysqli_fetch_array($query);
+  $sql = "SELECT * FROM cuentas";
+  $query = mysqli_query($con, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +35,7 @@
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="registro.html">Registrarse</a>
+                      <a class="nav-link" href="registro.php">Registrarse</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="nosotros.html">Nosotros</a>
@@ -99,7 +97,7 @@
           </div>
         </div>
     </header>
-    <section style="background-color: white">
+    <section>
       <div class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style=" border-bottom: 3px solid gray;">
         <div class="container-fluid" style="width: 60%;">
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
@@ -109,41 +107,44 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5">
-                    <div class="row"> 
-                        
-                        <div class="col-md-3">
-                            <h1>Ingrese datos</h1>
-                                <form action="insertar.php" method="POST">
-
-                                    <input type="text" class="form-control mb-3" name="cod_estudiante" placeholder="cod estudiante">
-                                    <input type="text" class="form-control mb-3" name="dni" placeholder="Dni">
-                                    <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres">
-                                    <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos">
-                                    
-                                    <input type="submit" class="btn btn-primary">
-                                </form>
-                        </div>
-
-                        <div class="col-md-8">
-                            <table class="table" >
-                                <thead class="table-success table-striped" >
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Apellido</th>
-                                        <th>Correo</th>
-                                        <th>Fecha de nacimiento</th>
-                                        <th></th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                        
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>  
-            </div>
+    <div>
+      <table class="table table-striped" >
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">Usuario</th>
+            <th scope="col">Contraseña</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Fecha de nacimiento</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Terminos</th>
+            <th scope="col">Actualizaciones</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            while ($row = mysqli_fetch_array($query)) {
+          ?>
+            <tr class="table-light">
+              <td><?php echo $row['Usuario']?></td>
+              <td><?php echo $row['Contrasena']?></td>
+              <td><?php echo $row['Nombre']?></td>
+              <td><?php echo $row['Apellido']?></td>
+              <td><?php echo $row['Fecha_nac']?></td>
+              <td><?php echo $row['Correo']?></td>
+              <td><?php echo $row['Terminos']?></td>
+              <td><?php echo $row['Actualizaciones']?></td>
+              <td><a href="actualizar.php?id=<?php echo $row['Usuario']?>"><button type="button" class="btn btn-secondary">Modificar</button></a></td>
+              <td><a href="eliminar.php?id=<?php echo $row['Usuario']?>"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
+            </tr>
+          <?php
+            }
+          ?>
+        </tbody>
+      </table>
+    </div>
     </section>
     <footer class="contenedor" >
       <div class="navbar-expand-lg bg-body-tertiary div_footer" data-bs-theme="dark" >
