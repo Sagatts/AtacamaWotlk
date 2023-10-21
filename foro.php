@@ -136,9 +136,14 @@
               <td><?php echo $row['Correo']?></td>
               <td><?php echo $row['Terminos']?></td>
               <td><?php echo $row['Actualizaciones']?></td>
-              <td><a href="actualizar.php?id=<?php echo $row['Usuario']?>"><button type="button" class="btn btn-secondary">Modificar</button></a></td>
-              <td><a href="eliminar.php?id=<?php echo $row['Usuario']?>"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
+              <td><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Actualizar_Usuario<?php echo $row['Usuario']; ?>">Modificar</button></td>
+              <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#EliminarCuentas<?php echo $row['Usuario']; ?>" >Eliminar</button></a></td>
             </tr>
+
+            <?php include('ModalEliminar.php'); ?>
+            
+            <?php include('ModalActualizar.php'); ?>
+
           <?php
             }
           ?>
