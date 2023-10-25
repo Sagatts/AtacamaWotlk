@@ -12,7 +12,7 @@
     <div class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid" style="width: 60%;">
             <div class="contenedor_logo">
-                <a style="padding-right: 50px;" href="index.html">
+                <a style="padding-right: 50px;" href="index.php">
                     <img src="img/Logo.png" class="logo" alt="Logo">
                 </a>
             </div>
@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 25px;">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</a>
@@ -31,7 +31,7 @@
                   <a class="nav-link" href="registro.php">Registrarse</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                  <a class="nav-link active" href="nosotros.php">Nosotros</a>
                 </li>
             </ul>
             </div>
@@ -39,27 +39,9 @@
     </div>
 </nav>
 <!--Modal-->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content bg-dark">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Inicio de sesion</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <label for="recipient-name" class="col-form-label">Usuario:</label>
-                <input type="text" class="form-control" id="recipient-name">
-                <label for="recipient-name" class="col-form-label">Contraseña:</label>
-                <input type="password" class="form-control" id="recipient-name">
-            </div>
-            <div class="modal-footer">
-                <p>No tienes cuenta? <a href="registro.html" class="link_modal">Registrate</a></p>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Iniciar</button>
-            </div>
-          </div>
-        </div>
-      </div>
+<?php
+  include('ModalInicio_Sesion.php')
+?>
 <!--Fin del Modal-->
     <header class="contenedor">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
