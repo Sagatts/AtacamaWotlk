@@ -25,7 +25,7 @@
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</a>
+                    <a class="nav-link" href="Inicio_sesion.php">Iniciar Sesion</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="registro.php">Registrarse</a>
@@ -38,11 +38,6 @@
         </div>
     </div>
 </nav>
-<!--Modal-->
-<?php
-  include('ModalInicio_Sesion.php')
-?>
-<!--Fin del Modal-->
     <header class="contenedor">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -77,7 +72,7 @@
           <div class="container-fluid" style="width: 60%;">
               <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
                 <div style="font-size: 25px;">
-                  <a class="nav-link active" aria-current="page" href="index.html">World of Warcraft Atacama</a>
+                  <a class="nav-link active" aria-current="page" href="index.php">World of Warcraft Atacama</a>
                 </div>
               </div>
           </div>

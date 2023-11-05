@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="js/bootstrap.js"></script>
-    <title>World of Warcraft Atacama</title>
+    <script src="js/alertas.js"></script>
+    <title>Inicio de sesion World of Warcraft Atacama</title>
 </head>
 <body>
   <nav class="contenedor">
@@ -22,10 +23,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 25px;">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    <a class="nav-link " aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Inicio_sesion.php">Iniciar Sesion</a>
+                    <a class="nav-link active" href="Inicio_sesion.php">Iniciar Sesion</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="registro.php">Registrarse</a>
@@ -41,6 +42,7 @@
         </div>
     </div>
 </nav>
+<!--Fin del Modal-->
     <header class="contenedor">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -80,46 +82,27 @@
             </div>
         </div>
     </div>
-    <div class="div_section">
-            <div class="contenedor text-center" style="padding-top: 10px;">
-                <div class="row align-items-start">
-                  <div class="col">
-                    <div class="card">
-                        <img src="./img/Horda.webp" class="card-img-top facciones_img" alt="Horda">
-                      
-                        <div class="card-body">
-                          <h5 class="wow-text card-title">La Horda</h5>
-                          <p class="card-text text_negro">La Horda es una de las dos facciones políticas más numerosa de las razas de Azeroth, en contrapartida a la Alianza. Es un grupo de supervivientes que han superado toda clase de adversidades, desde mundos destruidos a destierros, pasando por conflictos familiares y relaciones con aliados incómodos. Tienen un deseo común: la supremacía de la Horda.</p>
-                          <a href="#" class="btn btn-primary">Por la Horda</a>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col">
-                    <div class="card carta">
-                        <img src="./img/Alianza.webp" class="card-img-top facciones_img" alt="Alianza">
-                        <div class="card-body">
-                          <h5 class="wow-text card-title">La Alianza</h5>
-                          <p class="card-text text_negro">La Alianza es una de las dos facciones políticas más numerosa de las razas de Azeroth, en contrapartida a la Horda. La Alianza abarca una gran cantidad de poderosas culturas y grupos unidas no por la desesperación o la necesidad, sino por un profundo compromiso con conceptos abstractos como la nobleza y la justicia.</p>
-                          <a href="#" class="btn btn-primary">Por la Alianza</a>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-            </div>
-        <div class="div_section_2" style="padding-bottom: 10px;">
-            <div class="text-center">
-                <img src="img/Logo_wow.png" class="logo_wow rounded" alt="...">
-            </div>
-            <div>
-                <h1 class="fs-1 text-center wow-text">World of Warcraft Atacama</h1>
-                <p class="text-center">Sumérgete en el emocionante mundo de World of Warcraft 3.3.5a, un juego de rol en línea donde podrás crear tu propio héroe y explorar el vasto reino de Azeroth. Elige entre diversas razas y clases, enfrenta monstruos épicos, resuelve acertijos y forma alianzas con jugadores de todo el mundo. Ya sea que te guste el combate táctico, la exploración o las desafiantes mazmorras, este juego te ofrece infinitas posibilidades y diversión.
-                    Únete a una comunidad apasionada y forja tu propia leyenda en este emocionante servidor de World of Warcraft 3.3.5a. ¡La aventura te espera!</p>
-            </div>
-            <div class="text-center">
-                <button type="button" class="btn btn-primary btn-lg">Primario</button>
-                <button type="button" class="btn btn-secondary  btn-lg">Secundario</button>
-            </div>
-        </div>
+    <div class="contenedor_form" style="border: 3px solid gray; font-size: 17px; width: 20%">
+      <h1>Iniciar sesión</h1>
+      <form action="iniciar_la_sesion.php" method="GET" class="row g-3 needs-validation" novalidate>
+          <div>
+              <label for="inombre">Usuario:</label>
+              <input type="text" class="form-control" name="Usuario_sesion" required>
+              <div class="invalid-feedback">
+                  Por favor ingrese el usuario.
+              </div>
+          </div>
+          <div>
+              <label for="contrasena_user">Contraseña:</label>
+              <input type="password" class="form-control" name="Contrasena_sesion" required>
+              <div class="invalid-feedback">
+                  Por favor ingrese la contraseña.
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary" name="btnIngresar_sesion">Iniciar sesión</button>
+          <p class="texto_centrado">¿No estás registrado? Regístrate <a href="registro.php">Aquí</a></p>
+      </form>
+    </div>
     </section>
     <footer class="contenedor" >
       <div class="navbar-expand-lg bg-body-tertiary div_footer" data-bs-theme="dark" >
@@ -177,5 +160,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/validacion.js"></script>
 </body>
 </html>

@@ -1,10 +1,6 @@
 <div class="modal fade" id="Actualizar_Usuario<?php echo $row['Usuario']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <?php
         list($M_dia, $M_mes, $M_year) = explode("-", $row['Fecha_nac']);
-
-        if($row['Terminos']=="Si"){
-            $verdadero=true;
-        }
     ?>
     <div class="modal-dialog modal-fullscreen-sm-down">
         <div class="modal-content bg-dark">
@@ -13,7 +9,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form form action="actualizar_.php" method="POST" class="row g-3" novalidate>
+                <form form action="actualizar_.php" method="GET" class="row g-3 needs-validation" novalidate>
                     <input type="hidden" class="form-control" name="M_user_" id="M_user" value="<?php echo $row['Usuario']?>">
                     <div class="container">
                         <div class="row align-items-start">
@@ -102,15 +98,12 @@
                                 <option <?php if($row['Terminos'] === 'Si') { echo 'selected'; } ?> style="color: black;">Si</option>
                                 <option <?php if($row['Terminos'] === 'No') { echo 'selected'; } ?> style="color: black;">No</option>
                             </select>
-                            <div class="invalid-feedback">
-                            Debes aceptar antes de enviar.
-                            </div>
                         </div>
                         <div class="col" style="margin-top: 10px">
                             <label class="form-check-label" for="imejoras">
                                 Quiero recibir avisos de las actualizaciones (opcional).
                             </label>
-                            <select class="form-select" aria-label="Default select example" id="imejoras" name="M_mejoras_">
+                            <select class="form-select" aria-label="Default select example" id="M_mejoras" name="M_mejoras_">
                                 <option <?php if($row['Actualizaciones'] === 'Si') { echo 'selected'; } ?> style="color: black;">Si</option>
                                 <option <?php if($row['Actualizaciones'] === 'No') { echo 'selected'; } ?> style="color: black;">No</option>
                             </select>
@@ -124,4 +117,6 @@
             </div>
         </div>
     </div>
+    <script src="js/validacion.js"></script>
+    <script src="js/validacion_modi.js"></script>
 </div>

@@ -23,6 +23,7 @@
     $query = mysqli_query($con, $sql);
 
     if ($query) {
-        header("Location: foro.php");
+        $mensaje = "Se actualizaron los siguientes datos: Nombre: $M_nombre_, Apellido: $M_apellido_, Correo: $M_correo_, Fecha de nacimiento: $M_Fecha_nac_, Términos y condiciones: $M_terminos_, Actualizaciones: $M_actualizaciones_";
+        echo "<script>alert('$mensaje'); window.location = 'foro.php';</script>";
     }
 ?>

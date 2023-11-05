@@ -154,13 +154,17 @@ ul.horizontal-list li {
 
 .contenedor_form {
   margin: auto;
-  width: 35%;
   background-color: #333;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
+  border: 3px solid gray;
+}
+
+.contenedor_inicio {
+  width: 25%;
 }
 
 .texto_centrado {

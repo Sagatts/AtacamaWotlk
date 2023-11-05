@@ -2,7 +2,7 @@
   include("conexion.php");
   $con = conectar();
 
-  $sql = "SELECT * FROM cuentas";
+  $sql = "SELECT * FROM cuentas ORDER BY Usuario";
   $query = mysqli_query($con, $sql);
 ?>
 <!DOCTYPE html>
@@ -12,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script src="js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/alertas.js"></script>
   <title>Foro WoW Atacama</title>
 </head>
 <body>
@@ -32,7 +34,7 @@
                         <a class="nav-link" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</a>
+                        <a class="nav-link" href="Inicio_sesion.php">Iniciar Sesion</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="registro.php">Registrarse</a>
@@ -45,11 +47,6 @@
         </div>
     </div>
 </nav>
-<!--Modal-->
-<?php
-  include('ModalInicio_Sesion.php')
-?>
-<!--Fin del Modal-->
     <header class="contenedor">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -84,7 +81,7 @@
         <div class="container-fluid" style="width: 60%;">
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
               <div style="font-size: 25px;">
-                <a class="nav-link active" aria-current="page" href="index.html">World of Warcraft Atacama</a>
+                <a class="nav-link active" aria-current="page" href="index.php">World of Warcraft Atacama</a>
               </div>
             </div>
         </div>
@@ -119,10 +116,8 @@
               <td><?php echo $row['Terminos']?></td>
               <td><?php echo $row['Actualizaciones']?></td>
               <td><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Actualizar_Usuario<?php echo $row['Usuario']; ?>">Modificar</button></td>
-              <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#EliminarCuentas<?php echo $row['Usuario']; ?>" >Eliminar</button></a></td>
+              <td><button type="button" class="btn btn-danger" onclick="confirmacionEliminar('<?php echo $row['Usuario']; ?>')">Eliminar</button></a></td>
             </tr>
-
-            <?php include('ModalEliminar.php'); ?>
             
             <?php include('ModalActualizar.php'); ?>
 

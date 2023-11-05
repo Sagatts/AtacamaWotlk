@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/alertas.js"></script>
+    <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
     <title>Registro WoW Atacama</title>
 </head>
 <body>
@@ -25,7 +29,7 @@
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar Sesion</a>
+                    <a class="nav-link" href="Inicio_sesion.php">Iniciar Sesion</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="registro.php">Registrarse</a>
@@ -38,11 +42,6 @@
         </div>
     </div>
 </nav>
-<!--Modal-->
-<?php
-  include('ModalInicio_Sesion.php')
-?>
-<!--Fin del Modal-->
     <header class="contenedor">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -77,109 +76,109 @@
         <div class="container-fluid" style="width: 60%;">
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
               <div style="font-size: 25px;">
-                <a class="nav-link active" aria-current="page" href="index.html">World of Warcraft Atacama</a>
+                <a class="nav-link active" aria-current="page" href="index.php">World of Warcraft Atacama</a>
               </div>
             </div>
         </div>
-    </div>
-            <div class="contenedor_form" style="font-size: 17px;">
-                <h1>Registro</h1>
-                <form action="insertar.php" method="POST" class="row g-3 needs-validation" novalidate> 
-                    <div class="col-6">
-                      <label for="inombre">Nombre:</label>
-                        <input type="text" class="form-control" name="name_" id="inombre" required>
-                        <div class="invalid-feedback">
-                            Por favor ingrese el nombre.
-                        </div>
-                    </div>
-                    <div class="col-6">
-                      <label for="iapellido">Apellido:</label>
-                        <input type="text" class="form-control" name="apellido_" id="iapellido" required>
-                        <div class="invalid-feedback">
-                          Por favor ingrese el apellido.
-                      </div>
-                    </div>
-                    <div class="col-sm-12">
-                      <label for="icorreo">Correo Electronico:</label>
-                      <input type="email" class="form-control" id="icorreo" name="Correo" required>
-                      <div class="invalid-feedback">
-                        Por favor ingrese el correo.
-                    </div>
-                    </div>
-                      <label>Fecha de nacimiento:</label>
-                      <div class="col-3">
-                        <input type="text" class="form-control" id="idia" name="dia_" placeholder="Dia" required>
-                        <div class="invalid-feedback">
-                          Por favor ingrese el dia.
-                      </div>
-                      </div>
-                      <div class="col-6">
-                        <select class="form-select" aria-label="Default select example" id="imes" name="mes_" required>
-                          <option selected disabled value="" style="color: black;">Mes</option>
-                          <option value="01" style="color: black;">Enero</option>
-                          <option value="02" style="color: black;">Febrero</option>
-                          <option value="03" style="color: black;">Marzo</option>
-                          <option value="04" style="color: black;">Abril</option>
-                          <option value="05" style="color: black;">Mayo</option>
-                          <option value="06" style="color: black;">Junio</option>
-                          <option value="07" style="color: black;">Julio</option>
-                          <option value="08" style="color: black;">Agosto</option>
-                          <option value="09" style="color: black;">Septiembre</option>
-                          <option value="10" style="color: black;">Octubre</option>
-                          <option value="11" style="color: black;">Noviembre</option>
-                          <option value="12" style="color: black;">Diciembre</option>
-                        </select>
-                        <div class="invalid-feedback">
-                          Por favor ingrese el mes.
-                        </div>
-                    </div>
-                    <div class="col-3">
-                      <input type="text" class="form-control" id="iaño" name="ano_" placeholder="Año" required>
-                      <div class="invalid-feedback">
-                        Por favor ingrese el año.
-                      </div>
-                    </div>
-                    <div class="col-sm-12">
-                      <label>Nombre de Usuario:</label>
-                        <input type="text" class="form-control" name="user_" required>
-                        <div class="invalid-feedback">
-                          Por favor ingrese el usuario.
-                        </div>
-                    </div>
-                    <div class="col-6">
-                      <label>Contraseña:</label>
-                        <input type="password" class="form-control" name="contrasena_" id="icontraseña" required>
-                        <div class="invalid-feedback">
-                          Por favor ingrese la contraseña.
-                        </div>
-                    </div>
-                    <div class="col-6">
-                      <label>Confirmar contraseña:</label>
-                        <input type="password" class="form-control" id="icontrasena_confir" name="confirmar_contra_" required>
-                        <div class="invalid-feedback">
-                          Por favor confirme la contraseña.
-                        </div>
-                    </div>
-                    <div class="col-10">
-                        <input class="form-check-input" type="checkbox" value="Si" id="iterminos" name="terminos_" required>
-                        <label class="form-check-label" for="iterminos">
-                        Acepto los Términos y Condiciones y la Política de Privacidad
-                        </label>
-                        <div class="invalid-feedback">
-                          Debes aceptar antes de enviar.
-                        </div>
-                    </div>
-                    <div class="col-10">
-                        <input class="form-check-input" type="checkbox" value="" id="imejoras" name="mejoras_">
-                        <label class="form-check-label" for="imejoras">
-                        Quiero recibir avisos de las actualizaciones (opcional).
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Registrar</button>
-                    <p class="texto_centrado">Ya estas registrado? Inicia Sesion <a href="index.html" class="link_modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Aqui</a></p>
-                </form>
-            </div>
-        </section>
+      </div>
+      <div class="contenedor_form" style="width: 35%">
+          <h1>Registro</h1>
+          <form action="" method="GET" class="row g-3 needs-validation" novalidate> 
+              <div class="col-6">
+                <label for="inombre">Nombre:</label>
+                  <input type="text" class="form-control" name="name_" id="inombre" required>
+                  <div class="invalid-feedback">
+                      Por favor ingrese el nombre.
+                  </div>
+              </div>
+              <div class="col-6">
+                <label for="iapellido">Apellido:</label>
+                  <input type="text" class="form-control" name="apellido_" id="iapellido" required>
+                  <div class="invalid-feedback">
+                    Por favor ingrese el apellido.
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <label for="icorreo">Correo Electronico:</label>
+                <input type="email" class="form-control" id="icorreo" name="Correo" required>
+                <div class="invalid-feedback">
+                  Por favor ingrese el correo.
+              </div>
+              </div>
+                <label>Fecha de nacimiento:</label>
+                <div class="col-3">
+                  <input type="text" class="form-control" id="idia" name="dia_" placeholder="Dia" required>
+                  <div class="invalid-feedback">
+                    Por favor ingrese el dia.
+                </div>
+                </div>
+                <div class="col-6">
+                  <select class="form-select" aria-label="Default select example" id="imes" name="mes_" required>
+                    <option selected disabled value="" style="color: black;">Mes</option>
+                    <option value="01" style="color: black;">Enero</option>
+                    <option value="02" style="color: black;">Febrero</option>
+                    <option value="03" style="color: black;">Marzo</option>
+                    <option value="04" style="color: black;">Abril</option>
+                    <option value="05" style="color: black;">Mayo</option>
+                    <option value="06" style="color: black;">Junio</option>
+                    <option value="07" style="color: black;">Julio</option>
+                    <option value="08" style="color: black;">Agosto</option>
+                    <option value="09" style="color: black;">Septiembre</option>
+                    <option value="10" style="color: black;">Octubre</option>
+                    <option value="11" style="color: black;">Noviembre</option>
+                    <option value="12" style="color: black;">Diciembre</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor ingrese el mes.
+                  </div>
+              </div>
+              <div class="col-3">
+                <input type="text" class="form-control" id="iaño" name="ano_" placeholder="Año" required>
+                <div class="invalid-feedback">
+                  Por favor ingrese el año.
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <label>Nombre de Usuario:</label>
+                  <input type="text" class="form-control" name="user_" required>
+                  <div class="invalid-feedback">
+                    Por favor ingrese el usuario.
+                  </div>
+              </div>
+              <div class="col-6">
+                <label>Contraseña:</label>
+                  <input type="password" class="form-control" name="contrasena_" id="icontraseña" required>
+                  <div class="invalid-feedback">
+                    Por favor ingrese la contraseña.
+                  </div>
+              </div>
+              <div class="col-6">
+                <label>Confirmar contraseña:</label>
+                  <input type="password" class="form-control" id="icontrasena_confir" name="confirmar_contra_" required>
+                  <div class="invalid-feedback">
+                    Por favor confirme la contraseña.
+                  </div>
+              </div>
+              <div class="col-10">
+                  <input class="form-check-input" type="checkbox" value="Si" id="iterminos" name="terminos_" required>
+                  <label class="form-check-label" for="iterminos">
+                  Acepto los Términos y Condiciones y la Política de Privacidad
+                  </label>
+                  <div class="invalid-feedback">
+                    Debes aceptar antes de enviar.
+                  </div>
+              </div>
+              <div class="col-10">
+                  <input class="form-check-input" type="checkbox" id="I_mejoras" name="mejoras_">
+                  <label class="form-check-label" for="imejoras">
+                  Quiero recibir avisos de las actualizaciones (opcional).
+                  </label>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="confirmacionRegistro()">Registrar</button>
+              <p class="texto_centrado">Ya estas registrado? Inicia Sesion <a href="Inicio_sesion.php">Aqui</a></p>
+          </form>
+      </div>
+    </section>
         <!--Footer-->
         <footer class="contenedor" >
           <div class="navbar-expand-lg bg-body-tertiary div_footer" data-bs-theme="dark" >
@@ -237,26 +236,6 @@
           </div>
         </div>
       </footer>
-      <script>
-                  // Example starter JavaScript for disabling form submissions if there are invalid fields
-          (() => {
-            'use strict'
-
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
-
-            // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-              form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                  event.preventDefault()
-                  event.stopPropagation()
-                }
-
-                form.classList.add('was-validated')
-              }, false)
-            })
-          })()
-      </script>
+      <script src="js/validacion.js"></script>
     </body>
 </html>
