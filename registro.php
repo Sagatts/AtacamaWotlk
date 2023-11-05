@@ -83,7 +83,7 @@
       </div>
       <div class="contenedor_form" style="width: 35%">
           <h1>Registro</h1>
-          <form action="" method="GET" class="row g-3 needs-validation" novalidate> 
+          <form action="insertar.php" method="GET" class="row g-3 needs-validation" novalidate> 
               <div class="col-6">
                 <label for="inombre">Nombre:</label>
                   <input type="text" class="form-control" name="name_" id="inombre" required>
@@ -160,7 +160,7 @@
                   </div>
               </div>
               <div class="col-10">
-                  <input class="form-check-input" type="checkbox" value="Si" id="iterminos" name="terminos_" required>
+                  <input class="form-check-input" type="checkbox" id="iterminos" name="checkboxes[]" value="1" required>
                   <label class="form-check-label" for="iterminos">
                   Acepto los Términos y Condiciones y la Política de Privacidad
                   </label>
@@ -169,12 +169,12 @@
                   </div>
               </div>
               <div class="col-10">
-                  <input class="form-check-input" type="checkbox" id="I_mejoras" name="mejoras_">
-                  <label class="form-check-label" for="imejoras">
+                  <input class="form-check-input" type="checkbox" id="IMejoras_registro" name="checkboxes[]" value="2">
+                  <label class="form-check-label" for="IMejoras_registro">
                   Quiero recibir avisos de las actualizaciones (opcional).
                   </label>
               </div>
-              <button type="button" class="btn btn-primary" onclick="confirmacionRegistro()">Registrar</button>
+              <button type="sumbit" class="btn btn-primary">Registrar</button>
               <p class="texto_centrado">Ya estas registrado? Inicia Sesion <a href="Inicio_sesion.php">Aqui</a></p>
           </form>
       </div>
@@ -236,6 +236,6 @@
           </div>
         </div>
       </footer>
-      <script src="js/validacion.js"></script>
     </body>
+    <script src="js/validacion.js"></script>
 </html>

@@ -23,28 +23,3 @@ function confirmacionEliminar(Nombre_de_usuario){
         }
     });
 }
-function confirmacionRegistro() {
-    var form = document.querySelector('.needs-validation');
-    if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-        form.classList.add('was-validated');
-    } else {
-        Swal.fire({
-            title: '¿Estás seguro de enviar estos datos?',
-            icon: 'warning',
-            background: '#9c9c9c',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            cancelButtonText: 'Cancelar',
-            confirmButtonText: 'Confirmar'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                var formData = new FormData(form);
-                var queryString = new URLSearchParams(formData).toString();
-                window.location.href = `insertar.php?${queryString}`;
-            }
-        });
-    }
-}

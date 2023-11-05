@@ -14,6 +14,7 @@
   <script src="js/bootstrap.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/alertas.js"></script>
+  <script src="js/busqueda_dinamica.js"></script>
   <title>Foro WoW Atacama</title>
 </head>
 <body>
@@ -87,7 +88,26 @@
         </div>
     </div>
     <div>
-      <table class="table table-striped" >
+    <div style="margin-top: 20px; margin-bottom: 20px">
+      <div class="row align-items-start">
+        <div class="col">
+        <input type="text" class="form-control" id="inputBuscarUsuario" placeholder="Buscar por usuario" onkeyup="buscarTabla()" />
+        </div>
+        <div class="col">
+        <input type="text" class="form-control" id="inputBuscarNombre" placeholder="Buscar por nombre" onkeyup="buscarTabla()" />
+        </div>
+        <div class="col">
+        <input type="text" class="form-control" id="inputBuscarApellido" placeholder="Buscar por apellido" onkeyup="buscarTabla()" />
+        </div>
+        <div class="col">
+        <input type="text" class="form-control" id="inputBuscarCorreo" placeholder="Buscar por correo" onkeyup="buscarTabla()" />
+        </div>
+        <div class="col">
+        <input type="text" class="form-control" id="inputBuscarFecha" placeholder="Buscar por fecha de nacimiento" onkeyup="buscarTabla()" />
+        </div>
+      </div>
+    </div>   
+      <table class="table table-striped" id="tablaUsuarios">
         <thead>
           <tr class="table-dark">
             <th scope="col">Usuario</th>
