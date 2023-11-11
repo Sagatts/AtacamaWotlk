@@ -29,11 +29,13 @@
         }
     }
 
-    $sql="INSERT INTO cuentas (Usuario, Contrasena, Confirmacion_contra, Nombre, Apellido, Fecha_nac, Correo, Terminos, Actualizaciones) VALUES ('$Usuario_', '$Contrasena_', '$Confirmacion_', '$Nombre_', '$Apellido_', '$Fecha_nac', '$Correo_', '$Terminos_', '$Actualizaciones_')";
+    $Rol_="Jugador";
+
+    $sql="INSERT INTO cuentas (Usuario, Contrasena, Confirmacion_contra, Nombre, Apellido, Fecha_nac, Correo, Terminos, Actualizaciones,Rol) VALUES ('$Usuario_', '$Contrasena_', '$Confirmacion_', '$Nombre_', '$Apellido_', '$Fecha_nac', '$Correo_', '$Terminos_', '$Actualizaciones_','$Rol_')";
     $query = mysqli_query($con, $sql);
 
     if ($query) {
         echo "<script>alert('¡Registro exitoso! Inicie sesion en su cuenta');</script>";
-        header("refresh:10;url=Inicio_sesion.php");
+        header("refresh:0;url=Inicio_sesion.php");
     }
 ?>

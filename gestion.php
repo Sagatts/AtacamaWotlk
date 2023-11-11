@@ -15,39 +15,66 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/alertas.js"></script>
   <script src="js/busqueda_dinamica.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <title>Foro WoW Atacama</title>
 </head>
 <body>
   <nav class="contenedor">
-    <div class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid" style="width: 60%;">
-            <div class="contenedor_logo">
-                <a style="padding-right: 50px;" href="index.php">
-                    <img src="img/Logo.png" class="logo" alt="Logo">
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
+      <div class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+          <div class="container-fluid" style="width: 60%;">
+              <div class="contenedor_logo">
+                  <a style="padding-right: 50px;" href="index.php">
+                      <img src="img/Logo.png" class="logo" alt="Logo">
+                  </a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 25px;">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Inicio_sesion.php">Iniciar Sesion</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="registro.php">Registrarse</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="nosotros.php">Nosotros</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="nosotros.php">Nosotros</a>
+                  </li>
+                  <?php
+                    // Inicia la sesión
+                    session_start();
+
+                    if(isset($_SESSION["usuario"])) {
+                      $nombreUsuario = $_SESSION["usuario"];
+                      $rolUsuario = $_SESSION["rol"];
+
+                      echo '<li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    '.$nombreUsuario.'
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Perfil</a>
+                                    <a class="dropdown-item" href="#">Configuración</a>';
+
+                      // Verifica si el usuario tiene el rol "Admin" para mostrar el botón de "Gestión"
+                      if ($rolUsuario === 'Admin') {
+                          echo '<a class="dropdown-item" href="gestion.php">Gestion</a>';
+                      }
+
+                      echo '<div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="logout.php">Cerrar Sesión</a>
+                          </div>
+                        </li>';
+                    } else {
+                        echo '<li class="nav-item"><a class="nav-link" href="registro.php">Registrarse</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="Inicio_sesion.php">Iniciar Sesión</a></li>';
+                    }
+                  ?>
+              </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
     <header class="contenedor">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -111,13 +138,13 @@
         <thead>
           <tr class="table-dark">
             <th scope="col">Usuario</th>
-            <th scope="col">Contraseña</th>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
             <th scope="col">Fecha de nacimiento</th>
             <th scope="col">Correo</th>
             <th scope="col">Terminos</th>
             <th scope="col">Actualizaciones</th>
+            <th scope="col">Rol</th>
             <th></th>
             <th></th>
           </tr>
@@ -128,13 +155,13 @@
           ?>
             <tr class="table-light">
               <td><?php echo $row['Usuario']?></td>
-              <td><?php echo $row['Contrasena']?></td>
               <td><?php echo $row['Nombre']?></td>
               <td><?php echo $row['Apellido']?></td>
               <td><?php echo $row['Fecha_nac']?></td>
               <td><?php echo $row['Correo']?></td>
               <td><?php echo $row['Terminos']?></td>
               <td><?php echo $row['Actualizaciones']?></td>
+              <td><?php echo $row['Rol']?></td>
               <td><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Actualizar_Usuario<?php echo $row['Usuario']; ?>">Modificar</button></td>
               <td><button type="button" class="btn btn-danger" onclick="confirmacionEliminar('<?php echo $row['Usuario']; ?>')">Eliminar</button></a></td>
             </tr>

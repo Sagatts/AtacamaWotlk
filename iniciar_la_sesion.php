@@ -1,5 +1,8 @@
 <?php
     include("conexion.php");
+    
+    // Inicia la sesión
+    session_start();
 
     $con = conectar();
 
@@ -11,7 +14,12 @@
         $result = mysqli_query($con, $query);
 
         if (mysqli_num_rows($result) > 0) {
-            echo "<script>alert('¡Inicio de sesion exitoso!');</script>";
+            // Inicio de sesión exitoso, establece la variable de sesión
+            $usuarioData = mysqli_fetch_assoc($result);
+            $_SESSION["usuario"] = $Usuario_login;
+            $_SESSION["rol"] = $usuarioData["Rol"];
+
+            echo "<script>alert('¡Inicio de sesión exitoso!');</script>";
             header("refresh:0;url=index.php");
             exit();
         } else {

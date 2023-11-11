@@ -74,22 +74,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row align-items-start">
-                            <div class="col">
-                                <label>Contraseña:</label>
-                                <input type="text" class="form-control" name="M_contrasena_" id="M_contraseña" value="<?php echo $row['Contrasena']?>" required>
-                                <div class="invalid-feedback">
-                                Por favor ingrese la contraseña.
-                                </div>
-                            </div>
-                            <div class="col">
-                                <label>Confirmar contraseña:</label>
-                                <input type="text" class="form-control" id="M_contrasena_confir" name="M_confirmar_contra_" value="<?php echo $row['Confirmacion_contra']?>" required>
-                                <div class="invalid-feedback">
-                                Por favor confirme la contraseña.
-                                </div>
-                            </div>
-                        </div>
                         <div class="col" style="margin-top: 10px">
                             <label class="form-check-label" for="M_terminos">
                             Acepta los términos, condiciones y la Política de Privacidad
@@ -108,8 +92,17 @@
                                 <option <?php if($row['Actualizaciones'] === 'No') { echo 'selected'; } ?> style="color: black;">No</option>
                             </select>
                         </div>
+                        <div class="col" style="margin-top: 5px">
+                            <label class="form-check-label" for="rol">
+                                Rol:
+                            </label>
+                            <select class="form-select" aria-label="Default select example" id="M_rol" name="M_rol">
+                                <option <?php if($row['Rol'] === 'Admin') { echo 'selected'; } ?> style="color: black;">Admin</option>
+                                <option <?php if($row['Rol'] === 'Jugador') { echo 'selected'; } ?> style="color: black;">Jugador</option>
+                            </select>
+                        </div>    
                         <div class="text-end" style="margin-top: 10px;">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-primary">Confirmar Cambios</button>
                         </div>
                     </div>

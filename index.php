@@ -4,43 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <title>World of Warcraft Atacama</title>
 </head>
 <body>
   <nav class="contenedor">
-    <div class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid" style="width: 60%;">
-            <div class="contenedor_logo">
-                <a style="padding-right: 50px;" href="index.php">
-                    <img src="img/Logo.png" class="logo" alt="Logo">
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 25px;">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Inicio_sesion.php">Iniciar Sesion</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="registro.php">Registrarse</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="nosotros.php">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="foro.php">Foro</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-    </div>
-</nav>
+      <div class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+          <div class="container-fluid" style="width: 60%;">
+              <div class="contenedor_logo">
+                  <a style="padding-right: 50px;" href="index.php">
+                      <img src="img/Logo.png" class="logo" alt="Logo">
+                  </a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 400px;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 25px;">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="nosotros.php">Nosotros</a>
+                  </li>
+                  <?php
+                    // Inicia la sesión
+                    session_start();
+
+                    if(isset($_SESSION["usuario"])) {
+                      $nombreUsuario = $_SESSION["usuario"];
+                      $rolUsuario = $_SESSION["rol"];
+
+                      echo '<li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    '.$nombreUsuario.'
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Perfil</a>
+                                    <a class="dropdown-item" href="#">Configuración</a>';
+
+                      // Verifica si el usuario tiene el rol "Admin" para mostrar el botón de "Gestión"
+                      if ($rolUsuario === 'Admin') {
+                          echo '<a class="dropdown-item" href="gestion.php">Gestion</a>';
+                      }
+
+                      echo '<div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="logout.php">Cerrar Sesión</a>
+                          </div>
+                        </li>';
+                    } else {
+                        echo '<li class="nav-item"><a class="nav-link" href="registro.php">Registrarse</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="Inicio_sesion.php">Iniciar Sesión</a></li>';
+                    }
+                  ?>
+              </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
     <header class="contenedor">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">

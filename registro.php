@@ -9,6 +9,9 @@
     <script src="js/alertas.js"></script>
     <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
     <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <title>Registro WoW Atacama</title>
 </head>
 <body>
@@ -29,13 +32,13 @@
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Inicio_sesion.php">Iniciar Sesion</a>
+                  <a class="nav-link" href="nosotros.php">Nosotros</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="registro.php">Registrarse</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="nosotros.php">Nosotros</a>
+                    <a class="nav-link" href="Inicio_sesion.php">Iniciar Sesion</a>
                 </li>
             </ul>
             </div>
