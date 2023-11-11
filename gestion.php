@@ -163,7 +163,7 @@
               <td><?php echo $row['Actualizaciones']?></td>
               <td><?php echo $row['Rol']?></td>
               <td><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#Actualizar_Usuario<?php echo $row['Usuario']; ?>">Modificar</button></td>
-              <td><button type="button" class="btn btn-danger" onclick="confirmacionEliminar('<?php echo $row['Usuario']; ?>')">Eliminar</button></a></td>
+              <td><button type="button" class="btn btn-danger" onclick="confirmacionEliminar('<?php echo $row['Usuario']; ?>')">Eliminar</button></td>
             </tr>
             
             <?php include('ModalActualizar.php'); ?>

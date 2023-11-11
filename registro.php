@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="js/vali.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/alertas.js"></script>
@@ -85,38 +86,26 @@
         </div>
       </div>
       <div class="contenedor_form" style="width: 35%">
-          <h1>Registro</h1>
-          <form action="insertar.php" method="GET" class="row g-3 needs-validation" novalidate> 
-              <div class="col-6">
+        <h1>Registro</h1>
+        <form action="insertar.php" method="GET" class="row g-3" onsubmit="return validarFormulario()">
+            <div class="col-6">
                 <label for="inombre">Nombre:</label>
-                  <input type="text" class="form-control" name="name_" id="inombre" required>
-                  <div class="invalid-feedback">
-                      Por favor ingrese el nombre.
-                  </div>
-              </div>
-              <div class="col-6">
+                <input type="text" class="form-control" name="name_" id="inombre">
+            </div>
+            <div class="col-6">
                 <label for="iapellido">Apellido:</label>
-                  <input type="text" class="form-control" name="apellido_" id="iapellido" required>
-                  <div class="invalid-feedback">
-                    Por favor ingrese el apellido.
-                </div>
-              </div>
-              <div class="col-sm-12">
+                <input type="text" class="form-control" name="apellido_" id="iapellido">
+            </div>
+            <div class="col-sm-12">
                 <label for="icorreo">Correo Electronico:</label>
-                <input type="email" class="form-control" id="icorreo" name="Correo" required>
-                <div class="invalid-feedback">
-                  Por favor ingrese el correo.
-              </div>
-              </div>
-                <label>Fecha de nacimiento:</label>
-                <div class="col-3">
-                  <input type="text" class="form-control" id="idia" name="dia_" placeholder="Dia" required>
-                  <div class="invalid-feedback">
-                    Por favor ingrese el dia.
-                </div>
-                </div>
-                <div class="col-6">
-                  <select class="form-select" aria-label="Default select example" id="imes" name="mes_" required>
+                <input type="email" class="form-control" id="icorreo" name="Correo">
+            </div>
+            <label>Fecha de nacimiento:</label>
+            <div class="col-3">
+                <input type="text" class="form-control" id="idia" name="dia_" placeholder="Dia">
+            </div>
+            <div class="col-6">
+                <select class="form-select" aria-label="Default select example" id="imes" name="mes_">
                     <option selected disabled value="" style="color: black;">Mes</option>
                     <option value="01" style="color: black;">Enero</option>
                     <option value="02" style="color: black;">Febrero</option>
@@ -130,56 +119,38 @@
                     <option value="10" style="color: black;">Octubre</option>
                     <option value="11" style="color: black;">Noviembre</option>
                     <option value="12" style="color: black;">Diciembre</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Por favor ingrese el mes.
-                  </div>
-              </div>
-              <div class="col-3">
-                <input type="text" class="form-control" id="iaño" name="ano_" placeholder="Año" required>
-                <div class="invalid-feedback">
-                  Por favor ingrese el año.
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <label>Nombre de Usuario:</label>
-                  <input type="text" class="form-control" name="user_" required>
-                  <div class="invalid-feedback">
-                    Por favor ingrese el usuario.
-                  </div>
-              </div>
-              <div class="col-6">
+                </select>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" id="iaño" name="ano_" placeholder="Año">
+            </div>
+            <div class="col-sm-12">
+                <label for="iusuario">Nombre de Usuario:</label>
+                <input type="text" class="form-control" id="iusuario" name="user_">
+            </div>
+            <div class="col-6">
                 <label>Contraseña:</label>
-                  <input type="password" class="form-control" name="contrasena_" id="icontraseña" required>
-                  <div class="invalid-feedback">
-                    Por favor ingrese la contraseña.
-                  </div>
-              </div>
-              <div class="col-6">
+                <input type="password" class="form-control" name="contrasena_" id="icontraseña">
+            </div>
+            <div class="col-6">
                 <label>Confirmar contraseña:</label>
-                  <input type="password" class="form-control" id="icontrasena_confir" name="confirmar_contra_" required>
-                  <div class="invalid-feedback">
-                    Por favor confirme la contraseña.
-                  </div>
-              </div>
-              <div class="col-10">
-                  <input class="form-check-input" type="checkbox" id="iterminos" name="checkboxes[]" value="1" required>
-                  <label class="form-check-label" for="iterminos">
-                  Acepto los Términos y Condiciones y la Política de Privacidad
-                  </label>
-                  <div class="invalid-feedback">
-                    Debes aceptar antes de enviar.
-                  </div>
-              </div>
-              <div class="col-10">
-                  <input class="form-check-input" type="checkbox" id="IMejoras_registro" name="checkboxes[]" value="2">
-                  <label class="form-check-label" for="IMejoras_registro">
-                  Quiero recibir avisos de las actualizaciones (opcional).
-                  </label>
-              </div>
-              <button type="sumbit" class="btn btn-primary">Registrar</button>
-              <p class="texto_centrado">Ya estas registrado? Inicia Sesion <a href="Inicio_sesion.php">Aqui</a></p>
-          </form>
+                <input type="password" class="form-control" id="icontrasena_confir" name="confirmar_contra_">
+            </div>
+            <div class="col-10">
+                <input class="form-check-input" type="checkbox" id="iterminos" name="checkboxes[]" value="1">
+                <label class="form-check-label" for="iterminos">
+                    Acepto los Términos y Condiciones y la Política de Privacidad
+                </label>
+            </div>
+            <div class="col-10">
+                <input class="form-check-input" type="checkbox" id="IMejoras_registro" name="checkboxes[]" value="2">
+                <label class="form-check-label" for="IMejoras_registro">
+                    Quiero recibir avisos de las actualizaciones (opcional).
+                </label>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="validarFormulario()">Registrarse</button>
+            <p class="texto_centrado">¿Ya estás registrado? Inicia Sesión <a href="Inicio_sesion.php">Aquí</a></p>
+        </form>
       </div>
     </section>
         <!--Footer-->
@@ -240,5 +211,4 @@
         </div>
       </footer>
     </body>
-    <script src="js/validacion.js"></script>
 </html>
