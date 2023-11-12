@@ -8,6 +8,6 @@
     $query=mysqli_query($con,$sql);
 
         if($query){
-            Header("Location: foro.php");
+            Header("Location: gestion.php");
         }
 ?>

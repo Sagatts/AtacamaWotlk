@@ -1,6 +1,9 @@
 <?php
-session_start();
-unset($_SESSION['recu_usuario']);
+session_start(); // Inicia la sesión
+
+// Verifica si hay un nombre de usuario en la sesión
+$recu_usuario = isset($_SESSION['recu_usuario']) ? $_SESSION['recu_usuario'] : '';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,15 +91,21 @@ unset($_SESSION['recu_usuario']);
         </div>
     </div>
     <div class="contenedor_form" style="border: 3px solid gray; font-size: 17px; width: 25%">
-      <h1>Recuperar contraseña</h1>
-      <form action="buscar_en_la_bd.php" method="GET" class="row g-3 needs-validation" onsubmit="return validar_recuperar()" novalidate>
-      <div class="mb-3">
-            <label for="r_usuario" class="form-label">Nombre de Usuario</label>
-            <input type="text" class="form-control" id="r_usuario" name="recu_usuario" required>
-            <div id="error-usuario-recuperar" class="error-message error_mensaje"></div>
-        </div>
-        <button type="submit" class="btn btn-primary" onclick="alert('¿Estas seguro de enviar estos datos?')">Recuperar Contraseña</button>
-      </form>
+        <h1>Restablecer contraseña para: <?php echo $recu_usuario; ?></h1>
+        <form id="formRestablecer" action="res_pass.php" method="GET" class="row g-3 needs-validation" onsubmit="return validar_restablecer()" novalidate>
+            <input type="hidden" name="recu_usuario" value="<?php echo $recu_usuario; ?>">
+            <div class="col-12">
+                <label for="nueva_contrasena" class="form-label">Nueva Contraseña</label>
+                <input type="password" class="form-control" id="nueva_contrasena" name="nueva_contrasena" required>
+                <div id="error-nueva-contrasena" class="error-message error_mensaje"></div>
+            </div>
+            <div class="col-12">
+                <label for="confirmar_contrasena" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="confirmar_contrasena" name="confirmar_contrasena" required>
+                <div id="error-confirmar-contrasena" class="error-message error_mensaje"></div>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="alert('¿Estas seguro de enviar estos datos?')">Restablecer Contraseña</button>
+        </form>
     </div>
     </section>
     <footer class="contenedor" >

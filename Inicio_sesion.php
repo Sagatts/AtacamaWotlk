@@ -102,7 +102,7 @@
           <button type="submit" class="btn btn-primary" name="btnIngresar_sesion">Iniciar sesión</button>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="texto_centrado">¿No estás registrado? Regístrate <a href="registro.php">Aquí</a></li>
-            <li class="texto_centrado">¿Has olvidado la contraseña? Restáurala <a href="recuperar_pass.php">Aquí</a></li>
+            <li class="texto_centrado">¿Has olvidado tu contraseña? Restáurala <a href="recuperar_pass.php">Aquí</a></li>
         </ul>
       </form>
     </div>

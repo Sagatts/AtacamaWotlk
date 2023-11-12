@@ -10,6 +10,9 @@ a{
 @mixin color_letra($color_t){
     color: $color_t;
 }
+.error_mensaje{
+    color: rgb(238, 35, 35);
+}
 
 .text_negro{
     @include color_letra(black)

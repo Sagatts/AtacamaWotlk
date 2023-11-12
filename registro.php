@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="js/vali.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/alertas.js"></script>
-    <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
-    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <title>Registro WoW Atacama</title>
 </head>
 <body>
@@ -87,22 +79,26 @@
       </div>
       <div class="contenedor_form" style="width: 35%">
         <h1>Registro</h1>
-        <form action="insertar.php" method="GET" class="row g-3" onsubmit="return validarFormulario()">
+        <form action="insertar.php" method="GET" class="row g-3" onsubmit="return validarFormulario()" novalidate>
             <div class="col-6">
                 <label for="inombre">Nombre:</label>
                 <input type="text" class="form-control" name="name_" id="inombre">
+                <div id="error-nombre" class="error-message error_mensaje"></div>
             </div>
             <div class="col-6">
                 <label for="iapellido">Apellido:</label>
                 <input type="text" class="form-control" name="apellido_" id="iapellido">
+                <div id="error-apellido" class="error-message error_mensaje"></div>
             </div>
             <div class="col-sm-12">
                 <label for="icorreo">Correo Electronico:</label>
                 <input type="email" class="form-control" id="icorreo" name="Correo">
+                <div id="error-correo" class="error-message error_mensaje"></div>
             </div>
             <label>Fecha de nacimiento:</label>
             <div class="col-3">
                 <input type="text" class="form-control" id="idia" name="dia_" placeholder="Dia">
+                <div id="error-dia" class="error-message error_mensaje"></div>
             </div>
             <div class="col-6">
                 <select class="form-select" aria-label="Default select example" id="imes" name="mes_">
@@ -120,27 +116,33 @@
                     <option value="11" style="color: black;">Noviembre</option>
                     <option value="12" style="color: black;">Diciembre</option>
                 </select>
+                <div id="error-mes" class="error-message error_mensaje"></div>
             </div>
             <div class="col-3">
                 <input type="text" class="form-control" id="iaño" name="ano_" placeholder="Año">
+                <div id="error-ano" class="error-message error_mensaje"></div>
             </div>
             <div class="col-sm-12">
                 <label for="iusuario">Nombre de Usuario:</label>
-                <input type="text" class="form-control" id="iusuario" name="user_">
+                <input type="text" class="form-control" id="iusuario" name="user_" value="<?php echo isset($Usuario_) ? $Usuario_ : ''; ?>">
+                <div id="error-usuario" class="error-message error_mensaje"></div>
             </div>
             <div class="col-6">
                 <label>Contraseña:</label>
                 <input type="password" class="form-control" name="contrasena_" id="icontraseña">
+                <div id="error-contrasena" class="error-message error_mensaje"></div>
             </div>
             <div class="col-6">
                 <label>Confirmar contraseña:</label>
                 <input type="password" class="form-control" id="icontrasena_confir" name="confirmar_contra_">
+                <div id="error-confirmar-contrasena" class="error-message error_mensaje"></div>
             </div>
             <div class="col-10">
                 <input class="form-check-input" type="checkbox" id="iterminos" name="checkboxes[]" value="1">
                 <label class="form-check-label" for="iterminos">
                     Acepto los Términos y Condiciones y la Política de Privacidad
                 </label>
+                <div id="error-terminos" class="error-message error_mensaje"></div>
             </div>
             <div class="col-10">
                 <input class="form-check-input" type="checkbox" id="IMejoras_registro" name="checkboxes[]" value="2">
@@ -148,7 +150,7 @@
                     Quiero recibir avisos de las actualizaciones (opcional).
                 </label>
             </div>
-            <button type="button" class="btn btn-primary" onclick="validarFormulario()">Registrarse</button>
+            <button type="submit" class="btn btn-primary" onclick="alert('¿Estas seguro de enviar estos datos?')">Enviar</button>
             <p class="texto_centrado">¿Ya estás registrado? Inicia Sesión <a href="Inicio_sesion.php">Aquí</a></p>
         </form>
       </div>
