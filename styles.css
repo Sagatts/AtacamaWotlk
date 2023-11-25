@@ -1,0 +1,360 @@
+@charset "UTF-8";
+@import "./css/bootstrap.css";
+* {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.error_mensaje {
+  color: rgb(238, 35, 35);
+}
+
+.text_negro {
+  color: black;
+}
+
+.text_blanco {
+  color: white;
+}
+
+.link_modal {
+  color: rgb(109, 108, 223);
+}
+
+p {
+  font-family: "Cinzel", sans-serif;
+}
+
+body {
+  margin: auto;
+}
+
+.contenedor {
+  background-color: black;
+  margin: 0%;
+  z-index: 10;
+}
+
+nav {
+  background-image: url(img/Background_nav.jpg);
+  border-bottom: 3px solid gray;
+  font-size: 30px;
+}
+
+footer {
+  border-top: 3px solid gray;
+  height: 125px;
+}
+
+header {
+  height: auto;
+}
+
+section {
+  border-top: 3px solid gray;
+  background-color: rgb(8, 7, 8);
+  margin: 0;
+  border-bottom: 3px solid gray;
+  height: auto;
+}
+
+.contenedor_logo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 400px;
+  z-index: 5;
+}
+
+.logo {
+  width: 400px;
+  padding-top: 100px;
+}
+
+.navegacion {
+  width: 810px;
+  height: auto;
+  float: right;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 40px;
+}
+
+.div_nav {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  font-family: Cambria, Georgia, serif;
+}
+
+ul.horizontal-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.horizontal-list li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 40px;
+}
+
+.separacion_lista {
+  padding-top: 40px;
+}
+
+.img_header {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.borde {
+  background-color: #ffffff; /* Color de fondo del elemento */
+  border: 1px solid #dddddd; /* Borde sólido opcional */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.separacion_lista_foter {
+  margin-right: 100px;
+}
+
+.div_footer {
+  height: 110%;
+  margin: 0 auto;
+  padding-top: 20px;
+  justify-content: space-around;
+  text-align: center;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.div_section {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.div_section_2 {
+  margin-top: 50px;
+}
+
+.contenedor_2 {
+  margin-right: 40px;
+  width: 75%;
+}
+
+.contenedor_derecho {
+  margin: 0%;
+  width: 25%;
+  height: 300px;
+}
+
+.contenedor_form {
+  margin: auto;
+  background-color: #333;
+  color: white;
+  font-size: 17px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 3px solid gray;
+}
+
+.contenedor_inicio {
+  width: 25%;
+}
+
+.texto_centrado {
+  text-align: center;
+}
+.texto_centrado a {
+  color: rgb(77, 91, 221);
+}
+
+.color_fondo_derecho {
+  background-color: rgb(27, 27, 27);
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.img_derecha {
+  width: 100%;
+  height: 300px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.color_fondo_izquierdo {
+  background-color: rgb(27, 27, 27);
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.facciones_img {
+  height: 500px;
+  width: 100%;
+}
+
+.wow-text {
+  font-family: "Cinzel", sans-serif;
+  font-size: 48px;
+  color: #ffd100;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.boton {
+  text-decoration: none;
+  background-color: #e1ad12;
+  color: rgb(49, 49, 49);
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  float: left;
+}
+
+.video {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container_de {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #333;
+  margin: 20px 0;
+}
+
+.text_izq {
+  text-align: left;
+}
+
+.text_der {
+  text-align: right;
+}
+
+.barra_redes {
+  margin: 0 auto;
+  padding: 1px;
+  background-color: #333;
+  justify-content: center;
+  font-size: 20px;
+  display: flex;
+}
+
+.logo_wow {
+  width: 150px;
+  height: 150px;
+}
+
+ul.horizontal-list_2 li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+ul.horizontal-list_2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.separacion_footer {
+  margin-bottom: 15px;
+}
+
+/* Efecto de nieve https://www.youtube.com/watch?v=PimtMNytPM8  */
+body {
+  background-color: #222222;
+  margin: 0;
+}
+
+.container_n {
+  width: 0px;
+  height: 0px;
+}
+
+.snow {
+  background-image: url(img/snowball.png);
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  filter: blur(1.5px);
+}
+
+.little {
+  background-size: 150px 135px;
+  background-position: 0px -100px;
+  animation: snow1 14s infinite linear;
+}
+
+.normal {
+  animation: snow2 12s linear infinite;
+}
+
+.big {
+  background-size: 600px 540px;
+  background-position: 0px 90px;
+  animation: snow3 10s linear infinite;
+}
+
+.giant {
+  background-size: 900px 810px;
+  background-position: 150px 100px;
+  animation: snow4 8s linear infinite;
+}
+
+@keyframes snow1 {
+  0% {
+    background-position: 0px -100px;
+  }
+  100% {
+    background-position: 150px 35px;
+  }
+}
+@keyframes snow2 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 300px 270px;
+  }
+}
+@keyframes snow3 {
+  0% {
+    background-position: 0px 90px;
+  }
+  100% {
+    background-position: 600px 630px;
+  }
+}
+@keyframes snow4 {
+  0% {
+    background-position: 150px 100px;
+  }
+  100% {
+    background-position: 1050px 910px;
+  }
+}/*# sourceMappingURL=styles.css.map */
